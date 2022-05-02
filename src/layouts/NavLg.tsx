@@ -9,7 +9,7 @@ import colors from "../constants/colors";
 const NavbarLg = () => {
   return (
     <NavContainer>
-      <div className='row p-0 m-0 py-3 align-items-center'>
+      <div className='row p-0 m-0 py-3 px-3 align-items-center'>
         <div className='col-lg-4 m-0 p-0'>
           <Link to='/'>
             <Image src={Logo} />
@@ -34,7 +34,7 @@ const NavbarLg = () => {
 
 const NavContainer = styled.nav`
   width: 100%;
-  background-color: ${colors.dark};
+  /* background-color: ${colors.dark}; */
 `;
 const NavMenu = styled.div`
   @media (max-width: 768px) {

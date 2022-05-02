@@ -12,9 +12,11 @@ const Home = () => {
   }, 2000);
   if (loading) return <Loader />;
   return (
-    <Container className='p-3'>
+    <Container>
       <Layout>
-        <Hero />
+        <div className='px-3'>
+          <Hero />
+        </div>
       </Layout>
     </Container>
   );
@@ -22,6 +24,7 @@ const Home = () => {
 
 const Container = styled.div`
   background-color: ${colors.dark};
+  color: ${colors.white};
 `;
 
 export default Home;

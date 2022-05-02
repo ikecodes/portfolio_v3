@@ -6,7 +6,7 @@ import ScrollToTop from "react-scroll-to-top";
 const Footer = () => {
   return (
     <Container className='h-25'>
-      <ScrollToTop smooth color={colors.primary} />
+      <ScrollToTop smooth color={colors.dark} />
     </Container>
   );
 };

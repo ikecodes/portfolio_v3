@@ -1,7 +1,7 @@
 const colors = {
   primary: "#D0FA27",
   primaryLight: "rgba(208, 250, 39, 0.5)",
-  secondary: "#def1fa",
+  secondary: "rgba(255, 255, 255, 0.7)",
   tertiary: "#2280b9",
   textColor: "#14274A",
   headerColor: "#0f3677",
