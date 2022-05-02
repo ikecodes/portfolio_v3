@@ -13,7 +13,7 @@ const Container: React.FC<Props> = ({ children }) => {
   );
 };
 const Wrapper = styled.section`
-  height: 80vh;
+  height: 100vh;
   position: relative;
   background-color: ${colors.dark};
 `;
