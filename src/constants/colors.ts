@@ -4,7 +4,7 @@ const colors = {
   secondary: "rgba(255, 255, 255, 0.7)",
   tertiary: "#2280b9",
   textColor: "#14274A",
-  headerColor: "#0f3677",
+  headerColor: "#F8FFEA",
   overlay: "#4C509780",
   white: "#fff",
   black: "#000",

@@ -1,7 +1,7 @@
 const menus = [
   {
     id: "1",
-    name: "about",
+    name: "about me",
     path: "#about",
   },
   {

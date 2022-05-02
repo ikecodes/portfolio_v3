@@ -49,19 +49,19 @@ table {
 li,
 span,
 p {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 /* website scrollbar */
 body::-webkit-scrollbar {
-  width: 5px;
+  width: 0;
 }
 body::-webkit-scrollbar-track {
   box-shadow: none;
-  background-color: #2280b9;
+  /* background-color: #2280b9; */
 }
 body::-webkit-scrollbar-thumb {
-  background-color: #0f3677;
+  /* background-color: #0f3677; */
   outline: none;
 }
 

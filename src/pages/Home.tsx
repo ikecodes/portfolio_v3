@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import About from "../components/About";
 import Hero from "../components/Hero";
 import colors from "../constants/colors";
 import Layout from "../layouts/Layout";
@@ -16,6 +17,7 @@ const Home = () => {
       <Layout>
         <div className='px-3'>
           <Hero />
+          <About />
         </div>
       </Layout>
     </Container>

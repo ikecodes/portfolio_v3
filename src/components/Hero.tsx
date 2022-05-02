@@ -1,31 +1,27 @@
 import React from "react";
 import styled from "styled-components";
 import colors from "../constants/colors";
+import Container from "../layouts/Container";
+import ColoredHighlight from "../shared/ColoredHighlight";
+import WhiteHighlight from "../shared/WhiteHighlight";
 
 const Hero = () => {
   return (
     <Container>
-      <div>
-        <Header className='text-uppercase mb-0 m-0'>onuorah ikechukwu</Header>
-        <Text className='text-capitalize'>software engineer</Text>
-        <Text2>
-          I’m a software engineer specializing in building (and occasionally
-          designing) exceptional <Highlight2>digital experiences</Highlight2>.
-          Currently, I’m focused on building accessible, human-centered products
-          at
-          <HightLight> Buzzline</HightLight>
-        </Text2>
-      </div>
+      <Header className='text-uppercase mb-0 m-0'>onuorah ikechukwu</Header>
+      <Text className='text-capitalize'>software engineer</Text>
+      <Text2 className='mt-4'>
+        I’m a software engineer specializing in building (and occasionally
+        designing) exceptional
+        <WhiteHighlight> digital experiences</WhiteHighlight>. Currently, I’m
+        focused on building accessible, human-centered products at
+        <ColoredHighlight> Buzzline</ColoredHighlight>
+      </Text2>
     </Container>
   );
 };
-const Container = styled.div`
-  height: 100vh;
-  & div {
-    margin-top: 10rem;
-  }
-`;
 const Header = styled.h1`
+  color: ${colors.headerColor};
   font-size: 7rem;
   font-weight: 600;
   @media (max-width: 1200px) {
@@ -40,21 +36,14 @@ const Header = styled.h1`
 `;
 const Text = styled.p`
   font-size: 3rem;
-  color: ${colors.secondary};
+  color: ${colors.white};
   @media (max-width: 576px) {
     font-size: 2rem;
   }
 `;
 const Text2 = styled.p`
   color: ${colors.secondary};
-  max-width: 500px;
+  max-width: 700px;
 `;
-const HightLight = styled.span`
-  color: ${colors.primary};
-  font-weight: 500;
-`;
-const Highlight2 = styled.span`
-  color: ${colors.white};
-  font-weight: 500;
-`;
+
 export default Hero;

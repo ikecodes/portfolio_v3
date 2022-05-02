@@ -8,12 +8,19 @@ interface Props {
 const Container: React.FC<Props> = ({ children }) => {
   return (
     <Wrapper>
-      <div>{children}</div>
+      <Content>{children}</Content>
     </Wrapper>
   );
 };
 const Wrapper = styled.section`
-  padding: 2.5rem 0;
-  color: ${colors.primary};
+  height: 80vh;
+  position: relative;
+  background-color: ${colors.dark};
+`;
+const Content = styled.div`
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
 `;
 export default Container;
