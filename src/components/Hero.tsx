@@ -35,7 +35,7 @@ const Header = styled.h1`
 `;
 
 const Text = styled.p`
-  color: ${colors.secondary};
+  /* color: ${colors.secondary}; */
   max-width: 700px;
 `;
 

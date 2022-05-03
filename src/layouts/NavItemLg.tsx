@@ -29,7 +29,8 @@ const NavItem = styled.li`
   align-items: center;
   text-transform: capitalize;
   &:hover div {
-    width: 100%;
+    transform: scaleX(-5);
+    opacity: 1;
   }
   & a {
     color: ${colors.light};
@@ -40,8 +41,10 @@ const NavItem = styled.li`
 const MenuLine = styled.div`
   height: 3px;
   border-radius: 5px;
-  width: 0%;
+  opacity: 0;
+  width: 10px;
   background-color: ${colors.primary};
+  /* transform-origin: top left; */
   transition: all 0.2s linear;
 `;
 export default NavItemLg;
