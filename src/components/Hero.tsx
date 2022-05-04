@@ -11,6 +11,9 @@ const Hero = () => {
   const { darkMode, colors } = useContext(Context);
   return (
     <Container>
+      <Hello darkMode={darkMode} colors={colors}>
+        Hello I'm,
+      </Hello>
       <Header
         darkMode={darkMode}
         colors={colors}
@@ -31,7 +34,7 @@ const Hero = () => {
   );
 };
 const Header = styled.h1<ContextProps>`
-  color: ${(props) => props.colors.headerColor};
+  color: ${(props) => props.colors.light};
   font-size: 7rem;
   font-weight: 600;
   @media (max-width: 1200px) {
@@ -46,6 +49,10 @@ const Header = styled.h1<ContextProps>`
 `;
 const Width = styled.div`
   max-width: 700px;
+`;
+const Hello = styled.h2<ContextProps>`
+  color: ${(props) => props.colors.headerColor};
+  font-weight: 900;
 `;
 
 export default Hero;

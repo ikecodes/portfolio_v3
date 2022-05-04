@@ -8,5 +8,6 @@ export interface ContextProps {
     dim: string;
     box: string;
     grey: string;
+    green: string;
   };
 }

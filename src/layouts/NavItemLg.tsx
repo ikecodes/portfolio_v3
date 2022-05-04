@@ -30,8 +30,9 @@ const NavItem = styled.li<ContextProps>`
   justify-content: center;
   align-items: center;
   text-transform: capitalize;
+  font-size: 1rem;
   &:hover div {
-    transform: scaleX(-5);
+    transform: scaleX(-3);
     opacity: 1;
   }
   & a {

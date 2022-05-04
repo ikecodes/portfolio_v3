@@ -1,7 +1,6 @@
 import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { RiMenu5Fill } from "react-icons/ri";
 import menus from "../constants/menus";
 import { Context } from "../context/Provider";
 import { ContextProps } from "../constants/interfaces";
@@ -11,9 +10,12 @@ const NavSm = () => {
 
   return (
     <>
-      <OpenIcon onClick={() => setIsAnimating(true)}>
-        <RiMenu5Fill role='button' size={40} color={colors.light} />
-      </OpenIcon>
+      <NavIcon
+        className={`${isAnimating ? "active" : ""}`}
+        onClick={() => setIsAnimating((prev) => !prev)}
+        darkMode={darkMode}
+        colors={colors}
+      ></NavIcon>
       <AnimatingContainer
         className={isAnimating ? "clicked" : ""}
         onClick={(e) => setIsAnimating(false)}
@@ -39,18 +41,52 @@ const NavSm = () => {
   );
 };
 
-const OpenIcon = styled.span`
+const NavIcon = styled.span<ContextProps>`
+  cursor: pointer;
   position: absolute;
-  top: 1rem;
-  z-index: 100;
-  font-weight: 700;
+  height: 0;
+  width: 4rem;
   right: 1.5rem;
+  top: 1.7rem;
+  z-index: 1000;
   display: none;
-  @media (max-width: 768px) {
-    display: block;
+  &::before {
+    position: absolute;
+    content: "";
+    height: 0.3rem;
+    width: 3.5rem;
+    border-radius: 0.5rem;
+    background-color: ${(props) => props.colors.light};
+    transform-origin: center;
+    transform: rotate(0deg);
+    transition: all 0.2s ease-in;
+  }
+  &::after {
+    position: absolute;
+    top: 0.7rem;
+    content: "";
+    height: 0.3rem;
+    width: 2.5rem;
+    border-radius: 0.5rem;
+    background-color: ${(props) => props.colors.light};
+    transform-origin: center;
+    transform: rotate(0deg);
+    transition: all 0.2s ease-in;
+  }
+  @media only screen and (max-width: 700px) {
+    z-index: 1000;
+    display: inline-block;
+  }
+  &.active {
+    &::before {
+      transform: rotate(45deg);
+    }
+    &::after {
+      width: 3.5rem;
+      transform: rotate(-45deg);
+    }
   }
 `;
-
 const AnimatingContainer = styled.div`
   display: none;
   position: fixed;
@@ -90,7 +126,7 @@ const Heading = styled.h1<ContextProps>`
   font-size: 2rem;
   & a,
   a:link {
-    color: ${(props) => props.colors.dim};
+    color: ${(props) => props.colors.headerColor};
     text-decoration: none;
   }
 `;

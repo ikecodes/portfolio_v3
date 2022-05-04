@@ -60,7 +60,7 @@ const ResumeBtn = styled.button<ContextProps>`
   color: ${(props) => props.colors.headerColor};
   border: 1px solid ${(props) => props.colors.headerColor};
   padding: 0.5rem 1.3rem;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   text-transform: capitalize;
   transition: all 0.3s ease-in-out;
   &:hover {

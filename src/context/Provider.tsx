@@ -11,11 +11,12 @@ const Provider: React.FC<Props> = ({ children }) => {
 
   const colors = {
     headerColor: "#F8FFEA",
-    dark: darkMode ? "#151515" : "#F5F9FF",
+    dark: darkMode ? "#101011" : "#F5F9FF",
     light: darkMode ? "#F5F9FF" : "#080808",
     dim: "#777775",
-    box: "#1b1b1d",
+    box: "#16161a",
     grey: "#F2F2F2",
+    green: "#6ff6a7",
   };
 
   const changeMode = () => {
