@@ -12,7 +12,7 @@ const Hero = () => {
   return (
     <Container>
       <Hello darkMode={darkMode} colors={colors}>
-        Hello I'm,
+        Hello👋🏾 I'm,
       </Hello>
       <Header
         darkMode={darkMode}
@@ -23,11 +23,15 @@ const Hero = () => {
       </Header>
       <Width className='mt-4'>
         <Text>
-          I’m a <WhiteHighlight> software engineer</WhiteHighlight> specializing
-          in building (and occasionally designing) exceptional
-          <WhiteHighlight> digital experiences</WhiteHighlight>. Currently, I’m
+          a <WhiteHighlight> software engineer</WhiteHighlight> specializing in
+          building (and occasionally designing) awesome
+          <WhiteHighlight> web</WhiteHighlight> &
+          <WhiteHighlight> mobile applications</WhiteHighlight>. Currently, I’m
           focused on building accessible, human-centered products at{" "}
-          <LinkHighlight>Buzzline</LinkHighlight>
+          <LinkHighlight
+            text='Buzzline'
+            link='https://www.buzzline.app/'
+          ></LinkHighlight>
         </Text>
       </Width>
     </Container>
