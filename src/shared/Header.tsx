@@ -17,7 +17,7 @@ const Header: React.FC<Props> = ({ children }) => {
 
 const Head = styled.h1<ContextProps>`
   color: ${(props) => props.colors.headerColor};
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-size: 4rem;
   margin-bottom: 2rem;
   /* @media (max-width: 576px) {

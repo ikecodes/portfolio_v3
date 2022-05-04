@@ -24,13 +24,13 @@ const NavSm = () => {
           onClick={(e) => e.stopPropagation()}
         >
           {menus.map((menu) => (
-            <div className='ms-2' key={menu.id}>
+            <div className='ms-3' key={menu.id}>
               <Heading darkMode={darkMode} colors={colors}>
                 <Link to={menu.path}>{menu.name}</Link>
               </Heading>
             </div>
           ))}
-          <Heading darkMode={darkMode} colors={colors} className='ms-2'>
+          <Heading darkMode={darkMode} colors={colors} className='ms-3'>
             <Link to='/resume'>resume</Link>
           </Heading>
         </NavContainer>
@@ -87,7 +87,7 @@ const Heading = styled.h1<ContextProps>`
   color: ${(props) => props.colors.light};
   text-transform: capitalize;
   font-weight: 600 !important;
-  font-size: 2.5rem;
+  font-size: 2rem;
   & a,
   a:link {
     color: ${(props) => props.colors.dim};

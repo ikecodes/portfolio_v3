@@ -17,8 +17,8 @@ const Text: React.FC<Props> = ({ children }) => {
 };
 const Paragraph = styled.p<ContextProps>`
   color: ${(props) => props.colors.dim};
-  /* @media (max-width: 576px) {
+  @media (max-width: 576px) {
     font-size: 1.5rem;
-  } */
+  }
 `;
 export default Text;
