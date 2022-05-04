@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import Logo from "../assets/images/logo-placeholder.png";
 import NavItemLg from "./NavItemLg";
 import menus from "../constants/menus";
-import colors from "../constants/colors";
+import { ContextProps } from "../constants/interfaces";
+import { Context } from "../context/Provider";
 
 const NavbarLg = () => {
+  const { darkMode, colors } = useContext(Context);
   return (
     <NavContainer>
       <div className='row p-0 m-0 py-3 px-3 align-items-center'>
@@ -22,7 +24,9 @@ const NavbarLg = () => {
                 <NavItemLg key={menu.id} menu={menu} />
               ))}
               <Link to='/login'>
-                <ResumeBtn className='mx-1'>resume</ResumeBtn>
+                <ResumeBtn darkMode={darkMode} colors={colors} className='mx-1'>
+                  resume
+                </ResumeBtn>
               </Link>
             </ul>
           </NavMenu>
@@ -34,7 +38,6 @@ const NavbarLg = () => {
 
 const NavContainer = styled.nav`
   width: 100%;
-  /* background-color: ${colors.dark}; */
 `;
 const NavMenu = styled.div`
   @media (max-width: 768px) {
@@ -46,16 +49,15 @@ const Image = styled.img`
   width: 5rem;
 `;
 
-const ResumeBtn = styled.button`
+const ResumeBtn = styled.button<ContextProps>`
   background-color: transparent;
-  color: ${colors.primary};
-  border: 1px solid ${colors.primary};
+  color: ${(props) => props.colors.primary};
+  border: 1px solid ${(props) => props.colors.primary};
   padding: 0.5rem 1.3rem;
   text-transform: capitalize;
   transition: all 0.3s ease-in-out;
-
   &:hover {
-    background-color: ${colors.primaryLight};
+    background-color: ${(props) => props.colors.primaryLight};
   }
 `;
 

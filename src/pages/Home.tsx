@@ -9,14 +9,14 @@ import Layout from "../layouts/Layout";
 
 const Home = () => {
   // const [loading, setloading] = useState(true);
-  const { dark, colors } = useContext(Context);
+  const { darkMode, colors } = useContext(Context);
   // setTimeout(() => {
   //   setloading(false);
   // }, 2000);
   // if (loading) return <Loader />;
 
   return (
-    <Container dark={dark} colors={colors}>
+    <Container darkMode={darkMode} colors={colors}>
       <Layout>
         <div className='px-3'>
           <Hero />

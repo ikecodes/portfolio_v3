@@ -1,30 +1,36 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { CgMenuLeftAlt } from "react-icons/cg";
-import colors from "../constants/colors";
+import { RiMenu5Fill } from "react-icons/ri";
 import menus from "../constants/menus";
+import { Context } from "../context/Provider";
+import { ContextProps } from "../constants/interfaces";
 const NavSm = () => {
   const [isAnimating, setIsAnimating] = useState(false);
+  const { darkMode, colors } = useContext(Context);
 
   return (
     <>
       <OpenIcon onClick={() => setIsAnimating(true)}>
-        <CgMenuLeftAlt role='button' size={40} color={colors.white} />
+        <RiMenu5Fill role='button' size={40} color={colors.light} />
       </OpenIcon>
       <AnimatingContainer
         className={isAnimating ? "clicked" : ""}
         onClick={(e) => setIsAnimating(false)}
       >
-        <NavContainer onClick={(e) => e.stopPropagation()}>
+        <NavContainer
+          darkMode={darkMode}
+          colors={colors}
+          onClick={(e) => e.stopPropagation()}
+        >
           {menus.map((menu) => (
             <div className='ms-4' key={menu.id}>
-              <Heading>
+              <Heading darkMode={darkMode} colors={colors}>
                 <Link to={menu.path}>{menu.name}</Link>
               </Heading>
             </div>
           ))}
-          <Heading className='ms-4'>
+          <Heading darkMode={darkMode} colors={colors} className='ms-4'>
             <Link to='/resume'>resume</Link>
           </Heading>
         </NavContainer>
@@ -61,11 +67,11 @@ const AnimatingContainer = styled.div`
     display: block;
   }
 `;
-const NavContainer = styled.div`
+const NavContainer = styled.div<ContextProps>`
   position: relative;
   width: 100%;
   height: 100vh;
-  background: ${colors.primary};
+  background: ${(props) => props.colors.primary};
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -77,13 +83,13 @@ const NavContainer = styled.div`
     margin: 1rem 0;
   }
 `;
-const Heading = styled.h1`
-  color: ${colors.primary};
+const Heading = styled.h1<ContextProps>`
+  color: ${(props) => props.colors.primary};
   text-transform: capitalize;
   font-weight: 600 !important;
   & a,
   a:link {
-    color: ${colors.dark};
+    color: ${(props) => props.colors.dark};
     text-decoration: none;
   }
 `;

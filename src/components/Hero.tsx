@@ -1,15 +1,23 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
-import colors from "../constants/colors";
+import { ContextProps } from "../constants/interfaces";
+import { Context } from "../context/Provider";
 import Container from "../layouts/Container";
 import ColoredHighlight from "../shared/ColoredHighlight";
 import WhiteHighlight from "../shared/WhiteHighlight";
 
 const Hero = () => {
+  const { darkMode, colors } = useContext(Context);
   return (
     <Container>
-      <Header className='text-uppercase mb-0 m-0'>onuorah ikechukwu</Header>
-      <Text className='mt-4'>
+      <Header
+        darkMode={darkMode}
+        colors={colors}
+        className='text-uppercase mb-0 m-0'
+      >
+        onuorah ikechukwu
+      </Header>
+      <Text darkMode={darkMode} colors={colors} className='mt-4'>
         I’m a <WhiteHighlight> software engineer</WhiteHighlight> specializing
         in building (and occasionally designing) exceptional
         <WhiteHighlight> digital experiences</WhiteHighlight>. Currently, I’m
@@ -19,8 +27,8 @@ const Hero = () => {
     </Container>
   );
 };
-const Header = styled.h1`
-  color: ${colors.headerColor};
+const Header = styled.h1<ContextProps>`
+  color: ${(props) => props.colors.headerColor};
   font-size: 7rem;
   font-weight: 600;
   @media (max-width: 1200px) {
@@ -34,8 +42,8 @@ const Header = styled.h1`
   }
 `;
 
-const Text = styled.p`
-  /* color: ${colors.secondary}; */
+const Text = styled.p<ContextProps>`
+  color: ${(props) => props.colors.dim};
   max-width: 700px;
 `;
 
