@@ -1,14 +1,10 @@
 import React, { useState } from "react";
-
+import { ContextProps } from "../constants/interfaces";
 interface Props {
   children: React.ReactNode;
 }
-interface ContextProps {
-  dark: boolean;
-  changeState: () => void;
-  colors: {};
-}
-export const Context = React.createContext<ContextProps | null>(null);
+
+export const Context = React.createContext({} as ContextProps);
 
 const Provider: React.FC<Props> = ({ children }) => {
   const [dark, setDark] = useState(true);
@@ -23,8 +19,8 @@ const Provider: React.FC<Props> = ({ children }) => {
     overlay: "#4C509780",
     white: "#fff",
     black: "#000",
-    dark: "#080808",
-    light: "#F5F9FF",
+    dark: dark ? "#080808" : "#F5F9FF",
+    light: dark ? "#F5F9FF" : "#080808",
     grey: "#F2F2F2",
     grey1: "#828282",
     grey2: "#444",

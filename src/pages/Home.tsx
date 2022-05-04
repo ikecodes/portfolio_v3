@@ -3,22 +3,22 @@ import { Context } from "../context/Provider";
 import styled from "styled-components";
 import About from "../components/About";
 import Hero from "../components/Hero";
-import colors from "../constants/colors";
+import { ContextProps } from "../constants/interfaces";
 import Layout from "../layouts/Layout";
 // import Loader from "../shared/Loader";
+
 const Home = () => {
   // const [loading, setloading] = useState(true);
-  const value = useContext(Context);
+  const { dark, colors } = useContext(Context);
   // setTimeout(() => {
   //   setloading(false);
   // }, 2000);
   // if (loading) return <Loader />;
-  console.log(value);
+
   return (
-    <Container>
+    <Container dark={dark} colors={colors}>
       <Layout>
         <div className='px-3'>
-          <h1>{value?.dark ? "hey" : "fuk"}</h1>
           <Hero />
           <About />
         </div>
@@ -27,9 +27,9 @@ const Home = () => {
   );
 };
 
-const Container = styled.div`
-  background-color: ${colors.dark};
-  color: ${colors.white};
+const Container = styled.div<ContextProps>`
+  background-color: ${(props) => props.colors.dark};
+  color: ${(props) => props.colors.light};
 `;
 
 export default Home;

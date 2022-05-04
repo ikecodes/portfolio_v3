@@ -1,6 +1,5 @@
 import React from "react";
 import styled from "styled-components";
-import colors from "../constants/colors";
 
 interface Props {
   children: React.ReactNode;
@@ -15,7 +14,6 @@ const Container: React.FC<Props> = ({ children }) => {
 const Wrapper = styled.section`
   height: 100vh;
   position: relative;
-  background-color: ${colors.dark};
 `;
 const Content = styled.div`
   position: absolute;
