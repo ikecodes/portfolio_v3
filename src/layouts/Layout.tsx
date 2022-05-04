@@ -1,6 +1,6 @@
 import React from "react";
 import Footer from "./Footer";
-import Header from "./Header";
+import NavContainer from "./NavContainer";
 
 interface Props {
   children: React.ReactNode;
@@ -8,7 +8,7 @@ interface Props {
 const Layout: React.FC<Props> = ({ children }) => {
   return (
     <>
-      <Header />
+      <NavContainer />
       {children}
       <Footer />
     </>

@@ -3,7 +3,8 @@ import styled from "styled-components";
 import { ContextProps } from "../constants/interfaces";
 import { Context } from "../context/Provider";
 import Container from "../layouts/Container";
-import ColoredHighlight from "../shared/ColoredHighlight";
+import Text from "../shared/Text";
+import LinkHighlight from "../shared/LinkHighlight";
 import WhiteHighlight from "../shared/WhiteHighlight";
 
 const Hero = () => {
@@ -17,13 +18,15 @@ const Hero = () => {
       >
         onuorah ikechukwu
       </Header>
-      <Text darkMode={darkMode} colors={colors} className='mt-4'>
-        I’m a <WhiteHighlight> software engineer</WhiteHighlight> specializing
-        in building (and occasionally designing) exceptional
-        <WhiteHighlight> digital experiences</WhiteHighlight>. Currently, I’m
-        focused on building accessible, human-centered products at
-        <ColoredHighlight> Buzzline</ColoredHighlight>
-      </Text>
+      <Width className='mt-4'>
+        <Text>
+          I’m a <WhiteHighlight> software engineer</WhiteHighlight> specializing
+          in building (and occasionally designing) exceptional
+          <WhiteHighlight> digital experiences</WhiteHighlight>. Currently, I’m
+          focused on building accessible, human-centered products at{" "}
+          <LinkHighlight>Buzzline</LinkHighlight>
+        </Text>
+      </Width>
     </Container>
   );
 };
@@ -41,9 +44,7 @@ const Header = styled.h1<ContextProps>`
     font-size: 4rem;
   }
 `;
-
-const Text = styled.p<ContextProps>`
-  color: ${(props) => props.colors.dim};
+const Width = styled.div`
   max-width: 700px;
 `;
 

@@ -18,10 +18,10 @@ const Home = () => {
   return (
     <Container darkMode={darkMode} colors={colors}>
       <Layout>
-        <div className='px-3'>
+        <Wrapper>
           <Hero />
           <About />
-        </div>
+        </Wrapper>
       </Layout>
     </Container>
   );
@@ -30,6 +30,12 @@ const Home = () => {
 const Container = styled.div<ContextProps>`
   background-color: ${(props) => props.colors.dark};
   color: ${(props) => props.colors.light};
+`;
+const Wrapper = styled.div`
+  padding: 0 3rem;
+  @media (max-width: 576px) {
+    padding: 0 1rem;
+  }
 `;
 
 export default Home;

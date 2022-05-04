@@ -11,27 +11,33 @@ const NavbarLg = () => {
   const { darkMode, colors } = useContext(Context);
   return (
     <NavContainer>
-      <div className='row p-0 m-0 py-3 px-3 align-items-center'>
-        <div className='col-lg-4 m-0 p-0'>
-          <Link to='/'>
-            <Image src={Logo} />
-          </Link>
+      <Wrapper>
+        <div className='row p-0 m-0 py-3 align-items-center'>
+          <div className='col-lg-4 m-0 p-0'>
+            <Link to='/'>
+              <Image src={Logo} />
+            </Link>
+          </div>
+          <div className='col-lg-8 align-self-center p-0'>
+            <NavMenu>
+              <ul className='d-flex justify-content-end gap-4 align-items-center'>
+                {menus.map((menu) => (
+                  <NavItemLg key={menu.id} menu={menu} />
+                ))}
+                <Link to='/login'>
+                  <ResumeBtn
+                    darkMode={darkMode}
+                    colors={colors}
+                    className='mx-1'
+                  >
+                    resume
+                  </ResumeBtn>
+                </Link>
+              </ul>
+            </NavMenu>
+          </div>
         </div>
-        <div className='col-lg-8 align-self-center p-0'>
-          <NavMenu>
-            <ul className='d-flex justify-content-end gap-4 align-items-center'>
-              {menus.map((menu) => (
-                <NavItemLg key={menu.id} menu={menu} />
-              ))}
-              <Link to='/login'>
-                <ResumeBtn darkMode={darkMode} colors={colors} className='mx-1'>
-                  resume
-                </ResumeBtn>
-              </Link>
-            </ul>
-          </NavMenu>
-        </div>
-      </div>
+      </Wrapper>
     </NavContainer>
   );
 };
@@ -51,13 +57,20 @@ const Image = styled.img`
 
 const ResumeBtn = styled.button<ContextProps>`
   background-color: transparent;
-  color: ${(props) => props.colors.primary};
-  border: 1px solid ${(props) => props.colors.primary};
+  color: ${(props) => props.colors.headerColor};
+  border: 1px solid ${(props) => props.colors.headerColor};
   padding: 0.5rem 1.3rem;
+  font-size: 1.5rem;
   text-transform: capitalize;
   transition: all 0.3s ease-in-out;
   &:hover {
-    background-color: ${(props) => props.colors.primaryLight};
+    background-color: ${(props) => props.colors.box};
+  }
+`;
+const Wrapper = styled.div`
+  padding: 0 3rem;
+  @media (max-width: 576px) {
+    padding: 0 1rem;
   }
 `;
 

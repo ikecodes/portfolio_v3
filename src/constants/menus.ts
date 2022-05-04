@@ -6,16 +6,11 @@ const menus = [
   },
   {
     id: "2",
-    name: "experience",
-    path: "#experience",
-  },
-  {
-    id: "3",
     name: "work",
     path: "#work",
   },
   {
-    id: "4",
+    id: "3",
     name: "contact",
     path: "#contact",
   },

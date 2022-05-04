@@ -19,5 +19,9 @@ const Head = styled.h1<ContextProps>`
   color: ${(props) => props.colors.headerColor};
   text-transform: uppercase;
   font-size: 4rem;
+  margin-bottom: 2rem;
+  /* @media (max-width: 576px) {
+    font-size: 3rem;
+  } */
 `;
 export default Header;

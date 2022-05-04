@@ -45,7 +45,7 @@ const MenuLine = styled.div<ContextProps>`
   border-radius: 5px;
   opacity: 0;
   width: 10px;
-  background-color: ${(props) => props.colors.primary};
+  background-color: ${(props) => props.colors.headerColor};
   /* transform-origin: top left; */
   transition: all 0.2s linear;
 `;

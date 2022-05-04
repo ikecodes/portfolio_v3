@@ -6,16 +6,19 @@ import { Context } from "../context/Provider";
 interface Props {
   children: React.ReactNode;
 }
-const ColoredHighlight: React.FC<Props> = ({ children }) => {
+
+const Text: React.FC<Props> = ({ children }) => {
   const { darkMode, colors } = useContext(Context);
   return (
-    <HightLight darkMode={darkMode} colors={colors}>
+    <Paragraph colors={colors} darkMode={darkMode}>
       {children}
-    </HightLight>
+    </Paragraph>
   );
 };
-const HightLight = styled.span<ContextProps>`
-  color: ${(props) => props.colors.primary};
-  font-weight: 500;
+const Paragraph = styled.p<ContextProps>`
+  color: ${(props) => props.colors.dim};
+  /* @media (max-width: 576px) {
+    font-size: 1.5rem;
+  } */
 `;
-export default ColoredHighlight;
+export default Text;
