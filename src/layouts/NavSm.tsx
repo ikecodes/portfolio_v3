@@ -44,17 +44,18 @@ const NavSm = () => {
 const NavIcon = styled.span<ContextProps>`
   cursor: pointer;
   position: absolute;
-  height: 0;
+  height: 3rem;
   width: 4rem;
   right: 1.5rem;
-  top: 1.7rem;
+  top: 1rem;
   z-index: 1000;
   display: none;
   &::before {
     position: absolute;
     content: "";
+    top: 0.5rem;
     height: 0.3rem;
-    width: 3.5rem;
+    width: 3rem;
     border-radius: 0.5rem;
     background-color: ${(props) => props.colors.light};
     transform-origin: center;
@@ -63,10 +64,10 @@ const NavIcon = styled.span<ContextProps>`
   }
   &::after {
     position: absolute;
-    top: 0.7rem;
+    top: 1.5rem;
     content: "";
     height: 0.3rem;
-    width: 2.5rem;
+    width: 2rem;
     border-radius: 0.5rem;
     background-color: ${(props) => props.colors.light};
     transform-origin: center;
@@ -79,10 +80,12 @@ const NavIcon = styled.span<ContextProps>`
   }
   &.active {
     &::before {
+      top: 1.5rem;
+      width: 3rem;
       transform: rotate(45deg);
     }
     &::after {
-      width: 3.5rem;
+      width: 3rem;
       transform: rotate(-45deg);
     }
   }
@@ -93,7 +96,7 @@ const AnimatingContainer = styled.div`
   width: 100%;
   height: 100vh;
   z-index: 200;
-  background-color: rgb(0, 0, 0, 0.3);
+  background-color: rgb(0, 0, 0, 0.8);
   transform: translateX(100%);
   transition: all 0.3s ease-in;
   &.clicked {
@@ -113,7 +116,7 @@ const NavContainer = styled.div<ContextProps>`
   flex-direction: column;
   justify-content: center;
   text-transform: capitalize;
-  transform: translateX(50%);
+  transform: translateX(30%);
   gap: 2rem;
   & li {
     margin: 1rem 0;
@@ -123,7 +126,7 @@ const Heading = styled.h1<ContextProps>`
   color: ${(props) => props.colors.light};
   text-transform: capitalize;
   font-weight: 600 !important;
-  font-size: 2rem;
+  font-size: 3rem;
   & a,
   a:link {
     color: ${(props) => props.colors.headerColor};
