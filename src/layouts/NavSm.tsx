@@ -46,7 +46,7 @@ const NavIcon = styled.span<ContextProps>`
   position: absolute;
   height: 3rem;
   width: 4rem;
-  right: 1.5rem;
+  right: 0rem;
   top: 1rem;
   z-index: 1000;
   display: none;
@@ -54,8 +54,8 @@ const NavIcon = styled.span<ContextProps>`
     position: absolute;
     content: "";
     top: 0.5rem;
-    height: 0.3rem;
-    width: 3rem;
+    height: 0.2rem;
+    width: 2.5rem;
     border-radius: 0.5rem;
     background-color: ${(props) => props.colors.light};
     transform-origin: center;
@@ -66,8 +66,8 @@ const NavIcon = styled.span<ContextProps>`
     position: absolute;
     top: 1.5rem;
     content: "";
-    height: 0.3rem;
-    width: 2rem;
+    height: 0.2rem;
+    width: 1.5rem;
     border-radius: 0.5rem;
     background-color: ${(props) => props.colors.light};
     transform-origin: center;
@@ -81,11 +81,11 @@ const NavIcon = styled.span<ContextProps>`
   &.active {
     &::before {
       top: 1.5rem;
-      width: 3rem;
+      width: 2rem;
       transform: rotate(45deg);
     }
     &::after {
-      width: 3rem;
+      width: 2rem;
       transform: rotate(-45deg);
     }
   }
@@ -126,7 +126,7 @@ const Heading = styled.h1<ContextProps>`
   color: ${(props) => props.colors.light};
   text-transform: capitalize;
   font-weight: 600 !important;
-  font-size: 3rem;
+  font-size: 2rem;
   & a,
   a:link {
     color: ${(props) => props.colors.headerColor};

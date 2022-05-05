@@ -5,6 +5,7 @@ import About from "../components/About";
 import Hero from "../components/Hero";
 import { ContextProps } from "../constants/interfaces";
 import Layout from "../layouts/Layout";
+import Work from "../components/Work";
 // import Loader from "../shared/Loader";
 
 const Home = () => {
@@ -21,6 +22,7 @@ const Home = () => {
         <Wrapper>
           <Hero />
           <About />
+          <Work />
         </Wrapper>
       </Layout>
     </Container>
