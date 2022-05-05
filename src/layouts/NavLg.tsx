@@ -46,6 +46,9 @@ const NavContainer = styled.nav`
   width: 100%;
 `;
 const NavMenu = styled.div`
+  & ul {
+    list-style: decimal;
+  }
   @media (max-width: 768px) {
     display: none;
   }

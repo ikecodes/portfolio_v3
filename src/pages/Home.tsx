@@ -29,6 +29,7 @@ const Home = () => {
 
 const Container = styled.div<ContextProps>`
   background-color: ${(props) => props.colors.dark};
+  border: 2px solid ${(props) => props.colors.headerColor};
   color: ${(props) => props.colors.light};
 `;
 const Wrapper = styled.div`

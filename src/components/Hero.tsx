@@ -17,7 +17,7 @@ const Hero = () => {
       <Header
         darkMode={darkMode}
         colors={colors}
-        className='text-uppercase mb-0 m-0'
+        className='text-capitalize mb-0 m-0'
       >
         onuorah ikechukwu
       </Header>
@@ -40,7 +40,7 @@ const Hero = () => {
 const Header = styled.h1<ContextProps>`
   color: ${(props) => props.colors.light};
   font-size: 7rem;
-  font-weight: 600;
+  font-weight: 900;
   @media (max-width: 1200px) {
     font-size: 6rem;
   }
