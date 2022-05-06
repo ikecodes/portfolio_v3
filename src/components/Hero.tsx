@@ -1,26 +1,16 @@
-import React, { useContext } from "react";
+import React from "react";
 import styled from "styled-components";
-import { ContextProps } from "../constants/interfaces";
-import { Context } from "../context/Provider";
 import Container from "../layouts/Container";
 import Text from "../shared/Text";
 import LinkHighlight from "../shared/LinkHighlight";
 import WhiteHighlight from "../shared/WhiteHighlight";
+import colors from "../constants/colors";
 
 const Hero = () => {
-  const { darkMode, colors } = useContext(Context);
   return (
     <Container>
-      <Hello darkMode={darkMode} colors={colors}>
-        Hello👋🏾 I'm,
-      </Hello>
-      <Header
-        darkMode={darkMode}
-        colors={colors}
-        className='text-capitalize mb-0 m-0'
-      >
-        onuorah ikechukwu
-      </Header>
+      <Hello>Hello👋🏾 I'm,</Hello>
+      <Header className='text-capitalize mb-0 m-0'>onuorah ikechukwu</Header>
       <Width className='mt-4'>
         <Text>
           a <WhiteHighlight> software engineer</WhiteHighlight> specializing in
@@ -37,8 +27,8 @@ const Hero = () => {
     </Container>
   );
 };
-const Header = styled.h1<ContextProps>`
-  color: ${(props) => props.colors.primary};
+const Header = styled.h1`
+  color: ${colors.primary};
   font-size: 7rem;
   font-weight: 900;
   @media (max-width: 1200px) {
@@ -54,8 +44,8 @@ const Header = styled.h1<ContextProps>`
 const Width = styled.div`
   max-width: 700px;
 `;
-const Hello = styled.h2<ContextProps>`
-  color: ${(props) => props.colors.light};
+const Hello = styled.h2`
+  color: ${colors.light};
   font-weight: 900;
 `;
 

@@ -1,10 +1,9 @@
-import React, { useContext } from "react";
+import React from "react";
 import styled from "styled-components";
 import ScrollToTop from "react-scroll-to-top";
-import { Context } from "../context/Provider";
+import colors from "../constants/colors";
 
 const Footer = () => {
-  const { colors } = useContext(Context);
   return (
     <Container className='h-25'>
       <ScrollToTop smooth color={colors.dark} />

@@ -1,8 +1,7 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { ContextProps } from "../constants/interfaces";
-import { Context } from "../context/Provider";
+import colors from "../constants/colors";
 
 interface Props {
   menu: {
@@ -12,18 +11,17 @@ interface Props {
   };
 }
 const NavItemLg: React.FC<Props> = ({ menu }) => {
-  const { darkMode, colors } = useContext(Context);
   return (
     <div className='position-relative'>
-      <NavItem darkMode={darkMode} colors={colors} role='button'>
+      <NavItem role='button'>
         <Link to={menu.path}>{menu.name}</Link>
-        <MenuLine darkMode={darkMode} colors={colors}></MenuLine>
+        <MenuLine></MenuLine>
       </NavItem>
     </div>
   );
 };
 
-const NavItem = styled.li<ContextProps>`
+const NavItem = styled.li`
   font-weight: 500;
   display: flex;
   flex-direction: column;
@@ -36,17 +34,17 @@ const NavItem = styled.li<ContextProps>`
     opacity: 1;
   }
   & a {
-    color: ${(props) => props.colors.light};
+    color: ${colors.light};
     text-decoration: none;
     transition: all 0.3s ease-in;
   }
 `;
-const MenuLine = styled.div<ContextProps>`
+const MenuLine = styled.div`
   height: 3px;
   border-radius: 5px;
   opacity: 0;
   width: 10px;
-  background-color: ${(props) => props.colors.primary};
+  background-color: ${colors.primary};
   /* transform-origin: top left; */
   transition: all 0.2s linear;
 `;

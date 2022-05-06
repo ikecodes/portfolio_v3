@@ -1,14 +1,12 @@
-import React, { useContext } from "react";
+import React from "react";
 import styled from "styled-components";
 import Me from "../assets/images/me.jpeg";
-import { ContextProps } from "../constants/interfaces";
-import { Context } from "../context/Provider";
+import colors from "../constants/colors";
 import Container from "../layouts/Container";
 import Header from "../shared/Header";
 import Text from "../shared/Text";
 
 const About = () => {
-  const { darkMode, colors } = useContext(Context);
   return (
     <Container>
       <div>
@@ -35,36 +33,36 @@ const About = () => {
               building solid and scalable backend for applications using Node.js
             </Text>
             <Text>Here are a few technologies I use frequently:</Text>
-            <List darkMode={darkMode} colors={colors}>
-              <ListItem darkMode={darkMode} colors={colors}>
+            <List>
+              <ListItem>
                 {/* <span>▶♨</span> */}
                 <span>🔥</span>
                 <li>Javascript</li>
               </ListItem>
-              <ListItem darkMode={darkMode} colors={colors}>
+              <ListItem>
                 <span>🔥</span>
                 <li>TypeScript</li>
               </ListItem>
-              <ListItem darkMode={darkMode} colors={colors}>
+              <ListItem>
                 <span>🔥</span>
                 <li>React</li>
               </ListItem>
-              <ListItem darkMode={darkMode} colors={colors}>
+              <ListItem>
                 <span>🔥</span>
                 <li>React Native</li>
               </ListItem>
-              <ListItem darkMode={darkMode} colors={colors}>
+              <ListItem>
                 <span>🔥</span>
                 <li>Node.js/Express</li>
               </ListItem>
-              <ListItem darkMode={darkMode} colors={colors}>
+              <ListItem>
                 <span>🔥</span>
                 <li>MongoDb/Mongoose</li>
               </ListItem>
             </List>
           </div>
           <div className='col-lg-4 text-center'>
-            <ImageBox darkMode={darkMode} colors={colors}>
+            <ImageBox>
               <Image src={Me} />
             </ImageBox>
           </div>
@@ -74,7 +72,7 @@ const About = () => {
   );
 };
 
-const ImageBox = styled.div<ContextProps>`
+const ImageBox = styled.div`
   position: relative;
   height: 15rem;
   width: 15rem;
@@ -90,7 +88,7 @@ const ImageBox = styled.div<ContextProps>`
     z-index: 1;
     height: 100%;
     width: 100%;
-    border: 2px solid ${(props) => props.colors.primary};
+    border: 2px solid ${colors.primary};
     top: 20%;
     left: 20%;
     transition: all 0.3s ease-in;
@@ -105,10 +103,10 @@ const Image = styled.img`
   top: 0;
   left: 0;
 `;
-const List = styled.ul<ContextProps>`
+const List = styled.ul`
   list-style: none;
   font-size: 1rem;
-  color: ${(props) => props.colors.dim};
+  color: ${colors.dim};
   & div:not(:last-child) {
     margin-bottom: 1rem;
   }
@@ -116,11 +114,11 @@ const List = styled.ul<ContextProps>`
     font-size: 1.2rem;
   }
 `;
-const ListItem = styled.div<ContextProps>`
+const ListItem = styled.div`
   display: flex;
   align-items: center;
   & span {
-    color: ${(props) => props.colors.primary};
+    color: ${colors.primary};
     margin-right: 0.5rem;
     font-size: 1.2rem;
   }

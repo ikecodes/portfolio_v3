@@ -1,22 +1,16 @@
-import React, { useContext } from "react";
+import React from "react";
 import styled from "styled-components";
-import { ContextProps } from "../constants/interfaces";
-import { Context } from "../context/Provider";
+import colors from "../constants/colors";
 
 interface Props {
   children: React.ReactNode;
 }
 
 const Text: React.FC<Props> = ({ children }) => {
-  const { darkMode, colors } = useContext(Context);
-  return (
-    <Paragraph colors={colors} darkMode={darkMode}>
-      {children}
-    </Paragraph>
-  );
+  return <Paragraph>{children}</Paragraph>;
 };
-const Paragraph = styled.p<ContextProps>`
-  color: ${(props) => props.colors.dim};
+const Paragraph = styled.p`
+  color: ${colors.dim};
   font-size: 1.2rem;
 `;
 export default Text;

@@ -1,27 +1,24 @@
-import React, { useContext } from "react";
+import React from "react";
 import styled from "styled-components";
-import { ContextProps } from "../constants/interfaces";
-import { Context } from "../context/Provider";
+import colors from "../constants/colors";
 
 interface Props {
   text: string;
   link: string;
 }
 const LinkHighlight: React.FC<Props> = ({ text, link }) => {
-  const { darkMode, colors } = useContext(Context);
   return (
-    <HightLight darkMode={darkMode} colors={colors} href={link} target='_blank'>
+    <HightLight href={link} target='_blank'>
       {text}
     </HightLight>
   );
 };
-const HightLight = styled.a<ContextProps>`
+const HightLight = styled.a`
   position: relative;
-  color: ${(props) => props.colors.light};
+  color: ${colors.light};
   font-weight: 500;
-  /* text-decoration: underline; */
   &:hover {
-    color: ${(props) => props.colors.light};
+    color: ${colors.light};
   }
   &:hover::before {
     width: 50%;

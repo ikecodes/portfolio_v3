@@ -1,24 +1,22 @@
-import React, { useContext } from "react";
-import { Context } from "../context/Provider";
+import React from "react";
 import styled from "styled-components";
 import About from "../components/About";
 import Hero from "../components/Hero";
-import { ContextProps } from "../constants/interfaces";
 import Layout from "../layouts/Layout";
 import Work from "../components/Work";
 import BackgroundImg from "../assets/images/background.jpeg";
+import colors from "../constants/colors";
 // import Loader from "../shared/Loader";
 
 const Home = () => {
   // const [loading, setloading] = useState(true);
-  const { darkMode, colors } = useContext(Context);
   // setTimeout(() => {
   //   setloading(false);
   // }, 2000);
   // if (loading) return <Loader />;
 
   return (
-    <Container darkMode={darkMode} colors={colors}>
+    <Container>
       <Layout>
         <Wrapper>
           <Hero />
@@ -30,14 +28,11 @@ const Home = () => {
   );
 };
 
-const Container = styled.div<ContextProps>`
-  /* background-color: ${(props) => props.colors.dark}; */
+const Container = styled.div`
   background-image: url(${BackgroundImg});
   background-position: center;
-  /* background-size: cover; */
-  /* background-attachment: fixed; */
-  border: 2px solid ${(props) => props.colors.primary};
-  color: ${(props) => props.colors.light};
+  border: 2px solid ${colors.primary};
+  color: ${colors.light};
 `;
 const Wrapper = styled.div`
   padding: 0 3rem;

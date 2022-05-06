@@ -1,22 +1,16 @@
-import React, { useContext } from "react";
+import React from "react";
 import styled from "styled-components";
-import { ContextProps } from "../constants/interfaces";
-import { Context } from "../context/Provider";
+import colors from "../constants/colors";
 
 interface Props {
   children: React.ReactNode;
 }
 const Header: React.FC<Props> = ({ children }) => {
-  const { darkMode, colors } = useContext(Context);
-  return (
-    <Head darkMode={darkMode} colors={colors}>
-      {children}
-    </Head>
-  );
+  return <Head>{children}</Head>;
 };
 
-const Head = styled.h1<ContextProps>`
-  color: ${(props) => props.colors.primary};
+const Head = styled.h1`
+  color: ${colors.primary};
   text-transform: capitalize;
   font-size: 2.5rem;
   margin-bottom: 2rem;
