@@ -9,7 +9,7 @@ import colors from "../constants/colors";
 const Hero = () => {
   return (
     <Container>
-      <Hello>Hello👋🏾 I'm,</Hello>
+      <Hello>👋🏾 Hello, I'm</Hello>
       <Header className='text-capitalize mb-0 m-0'>onuorah ikechukwu</Header>
       <Width className='mt-4'>
         <Text>

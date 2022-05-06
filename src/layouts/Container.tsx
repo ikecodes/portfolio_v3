@@ -12,10 +12,14 @@ const Container: React.FC<Props> = ({ children }) => {
   );
 };
 const Wrapper = styled.section`
-  height: 120vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @media (max-width: 576px) {
+    height: 150vh;
+  }
 `;
 // const Content = styled.div`
 //   position: absolute;

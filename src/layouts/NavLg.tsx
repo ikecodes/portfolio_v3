@@ -53,13 +53,14 @@ const Image = styled.img`
 const ResumeBtn = styled.button`
   background-color: transparent;
   color: ${colors.primary};
-  border: 1px solid ${colors.primary};
+  border: 2px solid ${colors.primary};
   padding: 0.5rem 1.3rem;
   font-size: 1.2rem;
   text-transform: capitalize;
+  font-weight: 900;
   transition: all 0.3s ease-in-out;
   &:hover {
-    background-color: ${colors.box};
+    background-color: ${colors.primaryLight};
   }
 `;
 const Wrapper = styled.div`

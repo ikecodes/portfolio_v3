@@ -14,8 +14,8 @@ const About = () => {
         <div className='row justify-content-start align-items-center'>
           <div className='col-lg-8 mb-5'>
             <Text>
-              Hello! My name is Onuorah Emmanuel Ikechukwu and I enjoy building
-              and making things work on the internet. My interest in software
+              My name is Onuorah Emmanuel Ikechukwu and I enjoy building and
+              making things work on the internet. My interest in software
               development started back in 2019 when I decided to try editing
               custom Tumblr themes — turns out hacking together a custom reblog
               button taught me a lot about HTML & CSS!
@@ -36,27 +36,27 @@ const About = () => {
             <List>
               <ListItem>
                 {/* <span>▶♨</span> */}
-                <span>🔥</span>
+                <span>▶</span>
                 <li>Javascript</li>
               </ListItem>
               <ListItem>
-                <span>🔥</span>
+                <span>▶</span>
                 <li>TypeScript</li>
               </ListItem>
               <ListItem>
-                <span>🔥</span>
+                <span>▶</span>
                 <li>React</li>
               </ListItem>
               <ListItem>
-                <span>🔥</span>
+                <span>▶</span>
                 <li>React Native</li>
               </ListItem>
               <ListItem>
-                <span>🔥</span>
+                <span>▶</span>
                 <li>Node.js/Express</li>
               </ListItem>
               <ListItem>
-                <span>🔥</span>
+                <span>▶</span>
                 <li>MongoDb/Mongoose</li>
               </ListItem>
             </List>

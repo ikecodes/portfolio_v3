@@ -22,7 +22,7 @@ const NavItemLg: React.FC<Props> = ({ menu }) => {
 };
 
 const NavItem = styled.li`
-  font-weight: 500;
+  font-weight: 400;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -45,7 +45,6 @@ const MenuLine = styled.div`
   opacity: 0;
   width: 10px;
   background-color: ${colors.primary};
-  /* transform-origin: top left; */
   transition: all 0.2s linear;
 `;
 export default NavItemLg;
