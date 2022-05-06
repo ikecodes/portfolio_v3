@@ -4,6 +4,7 @@ import styled from "styled-components";
 import menus from "../constants/menus";
 import { Context } from "../context/Provider";
 import { ContextProps } from "../constants/interfaces";
+import BackgroundImg from "../assets/images/background.jpeg";
 const NavSm = () => {
   const [isAnimating, setIsAnimating] = useState(false);
   const { darkMode, colors } = useContext(Context);
@@ -110,7 +111,7 @@ const NavContainer = styled.div<ContextProps>`
   position: relative;
   width: 100%;
   height: 100vh;
-  background: ${(props) => props.colors.box};
+  background-image: url(${BackgroundImg});
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -129,7 +130,7 @@ const Heading = styled.h1<ContextProps>`
   font-size: 2rem;
   & a,
   a:link {
-    color: ${(props) => props.colors.headerColor};
+    color: ${(props) => props.colors.primary};
     text-decoration: none;
   }
 `;

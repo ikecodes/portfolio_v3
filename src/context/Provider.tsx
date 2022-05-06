@@ -10,7 +10,7 @@ const Provider: React.FC<Props> = ({ children }) => {
   const [darkMode, setDarkMode] = useState(true);
 
   const colors = {
-    headerColor: "#F8FFEA",
+    primary: "#F8FFEA",
     dark: darkMode ? "#101011" : "#F5F9FF",
     // dark: darkMode ? "#080808" : "#F5F9FF",
     light: darkMode ? "#F5F9FF" : "#080808",

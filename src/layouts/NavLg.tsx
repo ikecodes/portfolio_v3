@@ -60,8 +60,8 @@ const Image = styled.img`
 
 const ResumeBtn = styled.button<ContextProps>`
   background-color: transparent;
-  color: ${(props) => props.colors.headerColor};
-  border: 1px solid ${(props) => props.colors.headerColor};
+  color: ${(props) => props.colors.primary};
+  border: 1px solid ${(props) => props.colors.primary};
   padding: 0.5rem 1.3rem;
   font-size: 1.2rem;
   text-transform: capitalize;

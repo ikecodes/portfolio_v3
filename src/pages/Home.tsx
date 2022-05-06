@@ -6,6 +6,7 @@ import Hero from "../components/Hero";
 import { ContextProps } from "../constants/interfaces";
 import Layout from "../layouts/Layout";
 import Work from "../components/Work";
+import BackgroundImg from "../assets/images/background.jpeg";
 // import Loader from "../shared/Loader";
 
 const Home = () => {
@@ -30,8 +31,12 @@ const Home = () => {
 };
 
 const Container = styled.div<ContextProps>`
-  background-color: ${(props) => props.colors.dark};
-  border: 2px solid ${(props) => props.colors.headerColor};
+  /* background-color: ${(props) => props.colors.dark}; */
+  background-image: url(${BackgroundImg});
+  background-position: center;
+  /* background-size: cover; */
+  /* background-attachment: fixed; */
+  border: 2px solid ${(props) => props.colors.primary};
   color: ${(props) => props.colors.light};
 `;
 const Wrapper = styled.div`

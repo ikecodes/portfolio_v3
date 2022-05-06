@@ -38,7 +38,7 @@ const Hero = () => {
   );
 };
 const Header = styled.h1<ContextProps>`
-  color: ${(props) => props.colors.headerColor};
+  color: ${(props) => props.colors.primary};
   font-size: 7rem;
   font-weight: 900;
   @media (max-width: 1200px) {

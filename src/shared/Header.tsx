@@ -16,7 +16,7 @@ const Header: React.FC<Props> = ({ children }) => {
 };
 
 const Head = styled.h1<ContextProps>`
-  color: ${(props) => props.colors.headerColor};
+  color: ${(props) => props.colors.primary};
   text-transform: capitalize;
   font-size: 2.5rem;
   margin-bottom: 2rem;

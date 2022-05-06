@@ -38,27 +38,27 @@ const About = () => {
             <List darkMode={darkMode} colors={colors}>
               <ListItem darkMode={darkMode} colors={colors}>
                 {/* <span>▶♨</span> */}
-                <span>&#9832;</span>
+                <span>🔥</span>
                 <li>Javascript</li>
               </ListItem>
               <ListItem darkMode={darkMode} colors={colors}>
-                <span>&#9832;</span>
+                <span>🔥</span>
                 <li>TypeScript</li>
               </ListItem>
               <ListItem darkMode={darkMode} colors={colors}>
-                <span>&#9832;</span>
+                <span>🔥</span>
                 <li>React</li>
               </ListItem>
               <ListItem darkMode={darkMode} colors={colors}>
-                <span>&#9832;</span>
+                <span>🔥</span>
                 <li>React Native</li>
               </ListItem>
               <ListItem darkMode={darkMode} colors={colors}>
-                <span>&#9832;</span>
+                <span>🔥</span>
                 <li>Node.js/Express</li>
               </ListItem>
               <ListItem darkMode={darkMode} colors={colors}>
-                <span>&#9832;</span>
+                <span>🔥</span>
                 <li>MongoDb/Mongoose</li>
               </ListItem>
             </List>
@@ -90,7 +90,7 @@ const ImageBox = styled.div<ContextProps>`
     z-index: 1;
     height: 100%;
     width: 100%;
-    border: 2px solid ${(props) => props.colors.headerColor};
+    border: 2px solid ${(props) => props.colors.primary};
     top: 20%;
     left: 20%;
     transition: all 0.3s ease-in;
@@ -120,7 +120,7 @@ const ListItem = styled.div<ContextProps>`
   display: flex;
   align-items: center;
   & span {
-    color: ${(props) => props.colors.headerColor};
+    color: ${(props) => props.colors.primary};
     margin-right: 0.5rem;
     font-size: 1.2rem;
   }

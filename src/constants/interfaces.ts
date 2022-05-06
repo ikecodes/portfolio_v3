@@ -2,7 +2,7 @@ export interface ContextProps {
   darkMode: boolean;
   changeMode?: () => void;
   colors: {
-    headerColor: string;
+    primary: string;
     dark: string;
     light: string;
     dim: string;
