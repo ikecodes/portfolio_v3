@@ -1,12 +1,11 @@
 import React from "react";
-import Container from "../layouts/Container";
 import Header from "../shared/Header";
 
 const Work = () => {
   return (
-    <Container>
-      <Header>work</Header>
-    </Container>
+    <div className='mt-5'>
+      <Header>selected work</Header>
+    </div>
   );
 };
 

@@ -16,15 +16,5 @@ const Wrapper = styled.section`
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-  @media (max-width: 576px) {
-    height: 150vh;
-  }
 `;
-// const Content = styled.div`
-//   position: absolute;
-//   top: 50%;
-//   left: 0;
-//   transform: translateY(-50%);
-// `;
 export default Container;
