@@ -4,7 +4,7 @@ import styled from "styled-components";
 import Logo from "../assets/images/logo-placeholder.png";
 import NavItemLg from "./NavItemLg";
 import menus from "../constants/menus";
-import colors from "../constants/colors";
+import Button from "../shared/Button";
 
 const NavbarLg = () => {
   return (
@@ -22,9 +22,9 @@ const NavbarLg = () => {
                 {menus.map((menu) => (
                   <NavItemLg key={menu.id} menu={menu} />
                 ))}
-                <Link to='/login'>
-                  <ResumeBtn className='mx-1'>resume</ResumeBtn>
-                </Link>
+                <a href='#e' target='_blank'>
+                  <Button>resume</Button>
+                </a>
               </ul>
             </NavMenu>
           </div>
@@ -50,19 +50,6 @@ const Image = styled.img`
   width: 5rem;
 `;
 
-const ResumeBtn = styled.button`
-  background-color: transparent;
-  color: ${colors.primary};
-  border: 2px solid ${colors.primary};
-  padding: 0.5rem 1.3rem;
-  font-size: 1.2rem;
-  text-transform: capitalize;
-  font-weight: 900;
-  transition: all 0.3s ease-in-out;
-  &:hover {
-    background-color: ${colors.primaryLight};
-  }
-`;
 const Wrapper = styled.div`
   padding: 0 3rem;
   @media (max-width: 576px) {

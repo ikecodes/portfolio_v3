@@ -15,21 +15,21 @@ const LinkHighlight: React.FC<Props> = ({ text, link }) => {
 };
 const HightLight = styled.a`
   position: relative;
-  color: ${colors.light};
+  color: ${colors.primary};
   font-weight: 500;
-  font-size: 1.2rem;
+  text-decoration: none;
   &:hover {
-    color: ${colors.light};
+    color: ${colors.primary};
   }
   &:hover::before {
-    width: 50%;
+    width: 100%;
     opacity: 1;
   }
   &::before {
     content: "";
     height: 100%;
-    width: 0.5rem;
-    opacity: 0;
+    width: 50%;
+    opacity: 1;
     bottom: 0;
     background-color: rgba(225, 225, 225, 0.2);
     position: absolute;

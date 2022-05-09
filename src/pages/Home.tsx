@@ -6,6 +6,7 @@ import Layout from "../layouts/Layout";
 import Work from "../components/Work";
 import BackgroundImg from "../assets/images/background.jpeg";
 import colors from "../constants/colors";
+import Contact from "../components/Contact";
 // import Loader from "../shared/Loader";
 
 const Home = () => {
@@ -22,6 +23,7 @@ const Home = () => {
           <Hero />
           <About />
           <Work />
+          <Contact />
         </Wrapper>
       </Layout>
     </Container>

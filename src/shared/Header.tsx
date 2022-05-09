@@ -14,9 +14,7 @@ const Head = styled.h1`
   text-transform: capitalize;
   font-size: 2.5rem;
   margin-bottom: 2rem;
+  margin-top: 10rem;
   text-decoration: underline;
-  /* @media (max-width: 576px) {
-    font-size: 3rem;
-  } */
 `;
 export default Header;

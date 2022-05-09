@@ -163,12 +163,12 @@ const ListItem: React.FC<Props> = ({ children }) => {
 };
 
 const List = styled.ul`
-  list-style-type: upper-roman;
+  list-style-type: "▶ ";
+  list-style-position: outside;
+  list-style-image: none;
   & li {
     max-width: 700px;
-  }
-  & li:not(:last-child) {
-    margin-bottom: 2.5rem;
+    margin-bottom: 3rem;
   }
 `;
 export default Work;
