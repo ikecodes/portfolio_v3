@@ -15,6 +15,9 @@ const Footer = () => {
 const Container = styled.div`
   text-transform: capitalize;
   text-align: center;
+  & p {
+    font-size: 0.8rem;
+  }
   color: ${colors.primary};
 `;
 

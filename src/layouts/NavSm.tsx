@@ -4,6 +4,9 @@ import styled from "styled-components";
 import menus from "../constants/menus";
 import BackgroundImg from "../assets/images/background.jpeg";
 import colors from "../constants/colors";
+import { FaGithubSquare, FaLinkedin, FaTwitterSquare } from "react-icons/fa";
+import { ImMail } from "react-icons/im";
+import urls from "../constants/urls";
 const NavSm = () => {
   const [isAnimating, setIsAnimating] = useState(false);
 
@@ -28,6 +31,40 @@ const NavSm = () => {
           <Heading className='ms-3'>
             <Link to='/resume'>resume</Link>
           </Heading>
+          <div className='ms-3 d-flex gap-3'>
+            <IconLink
+              href={urls.github}
+              target='_blank'
+              rel='noreferrer'
+              color={colors.light}
+            >
+              <ImMail size={30} />
+            </IconLink>
+            <IconLink
+              href={urls.github}
+              target='_blank'
+              rel='noreferrer'
+              color={colors.light}
+            >
+              <FaGithubSquare size={30} />
+            </IconLink>
+            <IconLink
+              href={urls.linkedin}
+              target='_blank'
+              rel='noreferrer'
+              color={colors.light}
+            >
+              <FaLinkedin size={30} />
+            </IconLink>
+            <IconLink
+              href={urls.twitter}
+              target='_blank'
+              rel='noreferrer'
+              color={colors.light}
+            >
+              <FaTwitterSquare size={30} />
+            </IconLink>
+          </div>
         </NavContainer>
       </AnimatingContainer>
     </>
@@ -125,5 +162,8 @@ const Heading = styled.h1`
     color: ${colors.primary};
     text-decoration: none;
   }
+`;
+const IconLink = styled.a`
+  color: ${colors.light};
 `;
 export default NavSm;
