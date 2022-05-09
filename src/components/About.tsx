@@ -35,7 +35,7 @@ const About = () => {
             <ListItem>
               {/* <span>▶♨</span> */}
               <span>▶</span>
-              <li>Javascript</li>
+              <li>Javascript (ES6+)</li>
             </ListItem>
             <ListItem>
               <span>▶</span>
@@ -44,6 +44,10 @@ const About = () => {
             <ListItem>
               <span>▶</span>
               <li>React</li>
+            </ListItem>
+            <ListItem>
+              <span>▶</span>
+              <li>Redux</li>
             </ListItem>
             <ListItem>
               <span>▶</span>
@@ -117,7 +121,7 @@ const ListItem = styled.div`
   & span {
     color: ${colors.primary};
     margin-right: 0.5rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 `;
 export default About;

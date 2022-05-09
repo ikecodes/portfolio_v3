@@ -17,6 +17,7 @@ const HightLight = styled.a`
   position: relative;
   color: ${colors.light};
   font-weight: 500;
+  font-size: 1.2rem;
   &:hover {
     color: ${colors.light};
   }
