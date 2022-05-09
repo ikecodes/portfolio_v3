@@ -5,6 +5,7 @@ import Text from "../shared/Text";
 import LinkHighlight from "../shared/LinkHighlight";
 import WhiteHighlight from "../shared/WhiteHighlight";
 import colors from "../constants/colors";
+import Button from "../shared/Button";
 
 const Hero = () => {
   return (
@@ -18,11 +19,11 @@ const Hero = () => {
           <WhiteHighlight> web</WhiteHighlight> &
           <WhiteHighlight> mobile applications</WhiteHighlight>. Currently, I’m
           focused on building accessible, human-centered products at{" "}
-          <LinkHighlight
-            text='Buzzline'
-            link='https://www.buzzline.app/'
-          ></LinkHighlight>
+          <LinkHighlight text='buzzline' link='https://www.buzzline.app/' />
         </Text>
+        <a href='mailto:ikecodes@gmail.com'>
+          <Button active>contact me</Button>
+        </a>
       </Width>
     </Container>
   );

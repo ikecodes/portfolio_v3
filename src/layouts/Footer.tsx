@@ -5,12 +5,17 @@ import colors from "../constants/colors";
 
 const Footer = () => {
   return (
-    <Container className='h-25'>
+    <Container className='mt-5'>
+      <p>designed & built by onuorah ike &copy; 2022</p>
       <ScrollToTop smooth color={colors.dark} />
     </Container>
   );
 };
 
-const Container = styled.div``;
+const Container = styled.div`
+  text-transform: capitalize;
+  text-align: center;
+  color: ${colors.primary};
+`;
 
 export default Footer;
