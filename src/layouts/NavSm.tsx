@@ -33,7 +33,7 @@ const NavSm = () => {
           </Heading>
           <div className='ms-3 d-flex gap-3'>
             <IconLink
-              href={urls.github}
+              href={urls.email}
               target='_blank'
               rel='noreferrer'
               color={colors.light}
@@ -165,5 +165,10 @@ const Heading = styled.h1`
 `;
 const IconLink = styled.a`
   color: ${colors.light};
+
+  &:hover,
+  :active {
+    color: ${colors.primary};
+  }
 `;
 export default NavSm;

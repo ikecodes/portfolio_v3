@@ -10,6 +10,6 @@ const WhiteHighlight: React.FC<Props> = ({ children }) => {
 const HightLight = styled.span`
   color: ${colors.light};
   font-weight: 500;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 `;
 export default WhiteHighlight;

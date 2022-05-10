@@ -22,7 +22,7 @@ section {
 }
 body,
 body * {
-  line-height: 1.2 !important;
+  line-height: 1 !important;
   font-family: "Space Grotesk", sans-serif !important;
 }
 ol,
@@ -50,6 +50,7 @@ li,
 span,
 p {
   font-size: 1.2rem;
+  line-height: 1.5 !important;
 }
 
 /* website scrollbar */

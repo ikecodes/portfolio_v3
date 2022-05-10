@@ -22,8 +22,8 @@ const HightLight = styled.a<LinkProps>`
   color: ${colors.primary};
   font-weight: 500;
   text-decoration: none;
-  font-size: ${(props) => (props.lg ? "2rem" : "1.2rem")};
-  text-transform: ${(props) => (props.lg ? "uppercase" : "capitalize")};
+  font-size: ${(props) => (props.lg ? "1.5rem" : "1.1rem")};
+  text-transform: ${(props) => (props.lg ? "lowercase" : "capitalize")};
   &:hover {
     color: ${colors.primary};
   }
@@ -33,7 +33,7 @@ const HightLight = styled.a<LinkProps>`
   }
   &::before {
     content: "";
-    height: 100%;
+    height: 50%;
     width: 50%;
     opacity: 1;
     bottom: 0;

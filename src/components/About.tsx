@@ -4,6 +4,7 @@ import Me from "../assets/images/me.jpeg";
 import colors from "../constants/colors";
 import Header from "../shared/Header";
 import Text from "../shared/Text";
+import WhiteHighlight from "../shared/WhiteHighlight";
 
 const About = () => {
   return (
@@ -14,52 +15,57 @@ const About = () => {
           <Text>
             My name is Onuorah Emmanuel Ikechukwu and I enjoy building and
             making things work on the internet. My interest in software
-            development started back in 2019 when I decided to try editing
-            custom Tumblr themes — turns out hacking together a custom reblog
-            button taught me a lot about HTML & CSS!
+            development started back in 2019 when I decided to try building a
+            simple landing page from a youtube video I stumbled upon — making
+            every UI element was so much fun and taught me alot!
           </Text>
           <Text>
             Fast-forward to today, and I’ve had the privilege of working at a
-            number of companies including start-ups and huge corporations. I've
-            also had the opportunity to work on several projects as a
-            freelancer.
+            number of companies. I've also had the opportunity to work on
+            several projects as a freelancer.
           </Text>
           <Text>
             I have gained strong experience building user friendly and
-            accessible front-end of web and mobile applications using react and
+            accessible front-end for web and mobile applications using react and
             react native respectively. I also have good background in building
-            solid and scalable backend for applications using Node.js
+            solid and scalable back-end using Node.js
           </Text>
           <Text>Here are a few technologies I use frequently:</Text>
           <List>
             <ListItem>
-              {/* <span>▶♨</span> */}
-              <span>▶</span>
-              <li>Javascript (ES6+)</li>
+              <li>
+                <WhiteHighlight>Javascript (ES6+)</WhiteHighlight>
+              </li>
             </ListItem>
             <ListItem>
-              <span>▶</span>
-              <li>TypeScript</li>
+              <li>
+                <WhiteHighlight>TypeScript</WhiteHighlight>
+              </li>
             </ListItem>
             <ListItem>
-              <span>▶</span>
-              <li>React</li>
+              <li>
+                <WhiteHighlight>React</WhiteHighlight>
+              </li>
             </ListItem>
             <ListItem>
-              <span>▶</span>
-              <li>Redux</li>
+              <li>
+                <WhiteHighlight>Redux</WhiteHighlight>
+              </li>
             </ListItem>
             <ListItem>
-              <span>▶</span>
-              <li>React Native</li>
+              <li>
+                <WhiteHighlight>React Native</WhiteHighlight>
+              </li>
             </ListItem>
             <ListItem>
-              <span>▶</span>
-              <li>Node.js/Express</li>
+              <li>
+                <WhiteHighlight>Node.js/Express</WhiteHighlight>
+              </li>
             </ListItem>
             <ListItem>
-              <span>▶</span>
-              <li>MongoDb/Mongoose</li>
+              <li>
+                <WhiteHighlight>MongoDb/Mongoose</WhiteHighlight>
+              </li>
             </ListItem>
           </List>
         </div>
@@ -94,13 +100,24 @@ const ImageBox = styled.div`
     left: 20%;
     transition: all 0.3s ease-in;
   }
+  &::before {
+    position: absolute;
+    content: " ";
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    border: 2px solid ${colors.primary};
+    top: 20%;
+    left: 20%;
+    transition: all 0.3s ease-in;
+  }
 `;
 const Image = styled.img`
   position: absolute;
   height: 100%;
   width: 100%;
   object-fit: cover;
-  z-index: 100;
+  z-index: 3;
   top: 0;
   left: 0;
 `;
@@ -118,10 +135,5 @@ const List = styled.ul`
 const ListItem = styled.div`
   display: flex;
   align-items: center;
-  & span {
-    color: ${colors.primary};
-    margin-right: 0.5rem;
-    font-size: 1rem;
-  }
 `;
 export default About;

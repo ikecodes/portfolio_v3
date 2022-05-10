@@ -10,7 +10,7 @@ import Button from "../shared/Button";
 const Hero = () => {
   return (
     <Container>
-      <Hello>👋🏾 Hello, I'm</Hello>
+      <Hello className='m-0'>👋🏾 Hello, I'm</Hello>
       <Header className='text-capitalize mb-0 m-0'>onuorah ikechukwu</Header>
       <Width className='mt-4'>
         <Text>
