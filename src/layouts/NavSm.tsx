@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-scroll";
 import styled from "styled-components";
 import menus from "../constants/menus";
@@ -7,15 +7,15 @@ import colors from "../constants/colors";
 import { FaGithubSquare, FaLinkedin, FaTwitterSquare } from "react-icons/fa";
 import { ImMail } from "react-icons/im";
 import urls from "../constants/urls";
-const NavSm = () => {
-  const [isAnimating, setIsAnimating] = useState(false);
 
+interface Props {
+  isAnimating: boolean;
+  setIsAnimating: React.Dispatch<React.SetStateAction<boolean>>;
+}
+
+const NavSm: React.FC<Props> = ({ isAnimating, setIsAnimating }) => {
   return (
     <>
-      <NavIcon
-        className={`${isAnimating ? "active" : ""}`}
-        onClick={() => setIsAnimating((prev) => !prev)}
-      ></NavIcon>
       <AnimatingContainer
         className={isAnimating ? "clicked" : ""}
         onClick={() => setIsAnimating(false)}
@@ -72,62 +72,15 @@ const NavSm = () => {
     </>
   );
 };
-
-const NavIcon = styled.span`
-  cursor: pointer;
-  position: absolute;
-  height: 3rem;
-  width: 4rem;
-  right: 0rem;
-  top: 1rem;
-  z-index: 1000;
-  display: none;
-  &::before {
-    position: absolute;
-    content: "";
-    top: 0.5rem;
-    height: 0.2rem;
-    width: 2.5rem;
-    border-radius: 0.5rem;
-    background-color: ${colors.light};
-    transform-origin: center;
-    transform: rotate(0deg);
-    transition: all 0.2s ease-in;
-  }
-  &::after {
-    position: absolute;
-    top: 1.5rem;
-    content: "";
-    height: 0.2rem;
-    width: 1.5rem;
-    border-radius: 0.5rem;
-    background-color: ${colors.light};
-    transform-origin: center;
-    transform: rotate(0deg);
-    transition: all 0.2s ease-in;
-  }
-  @media only screen and (max-width: 700px) {
-    z-index: 1000;
-    display: inline-block;
-  }
-  &.active {
-    &::before {
-      top: 1.5rem;
-      width: 2rem;
-      transform: rotate(45deg);
-    }
-    &::after {
-      width: 2rem;
-      transform: rotate(-45deg);
-    }
-  }
-`;
 const AnimatingContainer = styled.div`
   display: none;
-  position: fixed;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100vh;
   z-index: 200;
+  /* border-top: 2px solid ${colors.primary}; */
   background-color: rgb(0, 0, 0, 0.8);
   transform: translateX(100%);
   transition: all 0.3s ease-in;

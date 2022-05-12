@@ -12,12 +12,12 @@ interface Props {
 const NavItemLg: React.FC<Props> = ({ menu }) => {
   return (
     <div className='position-relative'>
-      <Link to={menu.path} spy={true}>
-        <NavItem role='button'>
+      <NavItem role='button'>
+        <Link to={menu.path} spy={true}>
           {menu.name}
-          <MenuLine></MenuLine>
-        </NavItem>
-      </Link>
+        </Link>
+        <MenuLine></MenuLine>
+      </NavItem>
     </div>
   );
 };
