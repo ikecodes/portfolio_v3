@@ -21,7 +21,7 @@ const Nav = () => {
       if (oldValue < newValue) {
         // console.log("Up");
         setShow(false);
-      } else if (oldValue > newValue) {
+      } else if (oldValue > newValue || window.pageYOffset === 0) {
         // console.log("Down");
         setShow(true);
       }

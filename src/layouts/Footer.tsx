@@ -6,7 +6,7 @@ import colors from "../constants/colors";
 const Footer = () => {
   return (
     <Container className='mt-5'>
-      <p>designed & built by onuorah ike &copy; 2022</p>
+      <p>designed & built by onuorah ike</p>
       <ScrollToTop smooth color={colors.dark} />
     </Container>
   );
