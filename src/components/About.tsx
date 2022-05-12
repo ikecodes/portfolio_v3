@@ -89,6 +89,9 @@ const ImageBox = styled.div`
     top: 10%;
     left: 10%;
   }
+  &:hover::after {
+    background-color: transparent;
+  }
   &::before {
     position: absolute;
     content: " ";
@@ -100,15 +103,15 @@ const ImageBox = styled.div`
     left: 20%;
     transition: all 0.3s ease-in;
   }
-  &::before {
+  &::after {
     position: absolute;
     content: " ";
-    z-index: 1;
+    z-index: 4;
     height: 100%;
     width: 100%;
-    border: 2px solid ${colors.primary};
-    top: 20%;
-    left: 20%;
+    background-color: ${colors.primaryLight};
+    top: 0;
+    left: 0;
     transition: all 0.3s ease-in;
   }
 `;
