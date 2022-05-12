@@ -10,7 +10,7 @@ interface Props {
 }
 const Work = () => {
   return (
-    <div className='my-5'>
+    <div className='my-5' id='work'>
       <Header>some things i've built</Header>
       <List>
         {/* /////////// */}

@@ -1,5 +1,4 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 import styled from "styled-components";
 import colors from "../constants/colors";
 
@@ -13,10 +12,12 @@ interface Props {
 const NavItemLg: React.FC<Props> = ({ menu }) => {
   return (
     <div className='position-relative'>
-      <NavItem role='button'>
-        <Link to={menu.path}>{menu.name}</Link>
-        <MenuLine></MenuLine>
-      </NavItem>
+      <Link to={menu.path} spy={true}>
+        <NavItem role='button'>
+          {menu.name}
+          <MenuLine></MenuLine>
+        </NavItem>
+      </Link>
     </div>
   );
 };
@@ -38,6 +39,10 @@ const NavItem = styled.li`
     text-decoration: none;
     transition: all 0.3s ease-in;
   }
+  /* &.active div {
+    transform: scaleX(-3);
+    opacity: 1;
+  } */
 `;
 const MenuLine = styled.div`
   height: 3px;

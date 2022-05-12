@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "react-scroll";
 import styled from "styled-components";
 import menus from "../constants/menus";
 import BackgroundImg from "../assets/images/background.jpeg";
@@ -18,18 +18,20 @@ const NavSm = () => {
       ></NavIcon>
       <AnimatingContainer
         className={isAnimating ? "clicked" : ""}
-        onClick={(e) => setIsAnimating(false)}
+        onClick={() => setIsAnimating(false)}
       >
         <NavContainer onClick={(e) => e.stopPropagation()}>
           {menus.map((menu) => (
             <div className='ms-3' key={menu.id}>
               <Heading>
-                <Link to={menu.path}>{menu.name}</Link>
+                <Link to={menu.path} onClick={() => setIsAnimating(false)}>
+                  {menu.name}
+                </Link>
               </Heading>
             </div>
           ))}
           <Heading className='ms-3'>
-            <Link to='/resume'>resume</Link>
+            <Link to='resume'>resume</Link>
           </Heading>
           <div className='ms-3 d-flex gap-3'>
             <IconLink

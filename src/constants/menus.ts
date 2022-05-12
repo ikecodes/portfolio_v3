@@ -2,17 +2,17 @@ const menus = [
   {
     id: "1",
     name: "about me",
-    path: "#about",
+    path: "about",
   },
   {
     id: "2",
     name: "work",
-    path: "#work",
+    path: "work",
   },
   {
     id: "3",
     name: "contact",
-    path: "#contact",
+    path: "contact",
   },
 ];
 

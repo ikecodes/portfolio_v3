@@ -8,7 +8,7 @@ import WhiteHighlight from "../shared/WhiteHighlight";
 
 const About = () => {
   return (
-    <div className='mt-5'>
+    <div className='mt-5' id='about'>
       <Header>about me</Header>
       <div className='row justify-content-start align-items-center'>
         <div className='col-lg-8 mb-5'>
