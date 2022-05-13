@@ -15,6 +15,37 @@ const Work = () => {
       <List>
         {/* /////////// */}
         <ListItem>
+          <h4 className='text-capitalize'>grooming endownment trust</h4>
+          <Text>
+            This is a Trust fund web app. Features include grant application and
+            updates, blog. Also comes with a custom dashboard designed by me for
+            CRUD operations on the admin side.
+          </Text>
+          <div className='d-flex gap-4'>
+            <a
+              href='https://github.com/ikecodes/grooming_endowment_trust'
+              rel='noreferrer'
+              target='_blank'
+            >
+              <FaGithub size={20} color={colors.primary} />
+            </a>
+            <a
+              href='https://www.groomingendowment.org/home'
+              rel='noreferrer'
+              target='_blank'
+            >
+              <FaExternalLinkAlt size={20} color={colors.primary} />
+            </a>
+          </div>
+          <Stack className='d-flex gap-2 flex-wrap'>
+            <span>React</span>
+            <span>Bootstrap</span>
+            <span>Styled-Components</span>
+            <span>Firebase</span>
+          </Stack>
+        </ListItem>
+        {/* /////////// */}
+        <ListItem>
           <h4 className='text-capitalize'>spid realty</h4>
           <Text>
             Spid Realty is a real estate, housing and investment company. I
@@ -46,37 +77,7 @@ const Work = () => {
             <span>MongoDb</span>
           </Stack>
         </ListItem>
-        {/* /////////// */}
-        <ListItem>
-          <h4 className='text-capitalize'>grooming endownment trust</h4>
-          <Text>
-            This is a Trust fund web app. Features include grant application and
-            updates, blog. Also comes with a custom dashboard designed by me for
-            CRUD operations on the admin side.
-          </Text>
-          <div className='d-flex gap-4'>
-            <a
-              href='https://github.com/ikecodes/grooming_endowment_trust'
-              rel='noreferrer'
-              target='_blank'
-            >
-              <FaGithub size={20} color={colors.primary} />
-            </a>
-            <a
-              href='https://www.groomingendowment.org/home'
-              rel='noreferrer'
-              target='_blank'
-            >
-              <FaExternalLinkAlt size={20} color={colors.primary} />
-            </a>
-          </div>
-          <Stack className='d-flex gap-2 flex-wrap'>
-            <span>React</span>
-            <span>Bootstrap</span>
-            <span>Styled-Components</span>
-            <span>Firebase</span>
-          </Stack>
-        </ListItem>
+
         {/* /////////// */}
         <ListItem>
           <h4 className='text-capitalize'>xaron technologies</h4>
