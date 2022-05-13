@@ -32,6 +32,7 @@ const Home = () => {
 
 const Container = styled.div`
   background-image: url(${BackgroundImg});
+  /* background-color: ${colors.dark}; */
   background-position: center;
   border: 2px solid ${colors.primary};
   color: ${colors.light};
