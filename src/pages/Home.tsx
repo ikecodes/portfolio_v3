@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import About from "../components/About";
 import Hero from "../components/Hero";
@@ -7,14 +7,14 @@ import Work from "../components/Work";
 import BackgroundImg from "../assets/images/background.jpeg";
 import colors from "../constants/colors";
 import Contact from "../components/Contact";
-// import Loader from "../shared/Loader";
+import Loader from "../shared/Loader";
 
 const Home = () => {
-  // const [loading, setloading] = useState(true);
-  // setTimeout(() => {
-  //   setloading(false);
-  // }, 2000);
-  // if (loading) return <Loader />;
+  const [loading, setloading] = useState(true);
+  setTimeout(() => {
+    setloading(false);
+  }, 4000);
+  if (loading) return <Loader />;
 
   return (
     <Container>
