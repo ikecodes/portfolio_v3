@@ -31,7 +31,9 @@ const NavSm: React.FC<Props> = ({ isAnimating, setIsAnimating }) => {
             </div>
           ))}
           <Heading className='ms-3'>
-            <Link to='resume'>resume</Link>
+            <a href={urls.resume} target='_blank' rel='noreferrer'>
+              resume
+            </a>
           </Heading>
           <div className='ms-3 d-flex gap-3'>
             <IconLink

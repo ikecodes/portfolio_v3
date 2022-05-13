@@ -8,6 +8,7 @@ import Button from "../shared/Button";
 import BgImg from "../assets/images/background.jpeg";
 import colors from "../constants/colors";
 import NavSm from "./NavSm";
+import urls from "../constants/urls";
 
 const Nav = () => {
   const [show, setShow] = useState(true);
@@ -54,7 +55,7 @@ const Nav = () => {
                 {menus.map((menu) => (
                   <NavItemLg key={menu.id} menu={menu} />
                 ))}
-                <a href='#e' target='_blank'>
+                <a href={urls.resume} target='_blank' rel='noreferrer'>
                   <Button>resume</Button>
                 </a>
               </ul>
