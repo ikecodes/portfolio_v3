@@ -25,12 +25,6 @@ body * {
   line-height: 1 !important;
   font-family: "Space Grotesk", sans-serif !important;
 }
-ol,
-ul {
-  list-style: none;
-  padding: 0px !important;
-  margin: 0 !important;
-}
 blockquote,
 q {
   quotes: none;

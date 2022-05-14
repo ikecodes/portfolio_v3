@@ -126,6 +126,7 @@ const Image = styled.img`
 `;
 const List = styled.ul`
   list-style: none;
+  list-style-type: "</> ";
   font-size: 1rem;
   color: ${colors.dim};
   & div:not(:last-child) {
