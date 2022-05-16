@@ -45,9 +45,12 @@ const ListItem: React.FC<Props> = ({
       <Head className='text-capitalize'>{title}</Head>
       <Text>{description}</Text>
       <div className='d-flex gap-4'>
-        <a href={githubUrl} rel='noreferrer' target='_blank'>
-          <FaGithub size={20} color={colors.primary} />
-        </a>
+        {githubUrl !== "" && (
+          <a href={githubUrl} rel='noreferrer' target='_blank'>
+            <FaGithub size={20} color={colors.primary} />
+          </a>
+        )}
+
         <a href={liveUrl} rel='noreferrer' target='_blank'>
           <FaExternalLinkAlt size={20} color={colors.primary} />
         </a>
