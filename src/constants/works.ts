@@ -19,7 +19,7 @@ const works: {
     id: 2,
     title: "spid realty",
     description:
-      " Spid Realty is a real estate, housing and investment company. I designed and developed the companies web application. Agents signup and can post properties for sale or rent.",
+      "Spid Realty is a real estate, housing and investment company. Features include authentication, property upload, agent and property verification, property promotion with scheduler etc. I also design and implemented a custom admin dashboard for this web app.",
     githubUrl: "https://github.com/ikecodes/spidRealty_frontend",
     liveUrl: "https://www.spidrealty.com",
     stacks: [
@@ -35,7 +35,7 @@ const works: {
     id: 3,
     title: "buzzline",
     description:
-      " Buzzline is a Customer Relationship Management (CRM) application for small business owners. I did work on the front-end using React Native. Worked on and implemented features which includes messaging, language translations, in-app purchases & subscriptions using revenuecat.",
+      "Buzzline is a Customer Relationship Management (CRM) application for small business owners. Built using React Native. Worked on and implemented features which includes messaging, language translations, coupons, google analytics, in-app purchases & subscriptions using revenuecat etc.",
     githubUrl: "",
     liveUrl: "https://www.buzzline.app/",
     stacks: ["React Native", "Node.js/Express", "MongoDb"],
@@ -44,7 +44,7 @@ const works: {
     id: 4,
     title: "xaron technologies",
     description:
-      "Xaron technologies solves delievery services problem in Nigeria. Worked on the front-end using react, but my major work here was on the backend. I was able to implement real-time location tracking of riders, authenticaation, order request and delivery etc.",
+      "Xaron technologies solves delievery services problem in Nigeria. Worked with a team on the front-end using react. Did major work on the server-side. Implemented real-time location tracking of riders, authentication, order request and delivery etc.",
     githubUrl: "https://github.com/ikecodes/xaron_backend",
     liveUrl: "https://xaron-tech.com/",
     stacks: ["React", "Bootstrap", "Socket.io", "Node.js/Express", "MongoDb"],
@@ -53,7 +53,7 @@ const works: {
     id: 5,
     title: "broadcast nigeria",
     description:
-      "  E-commerce web app for the sale of various sound equipments. Features include authentication, adding to cart, payment gateways etc",
+      "E-commerce web application for the sale of various sound equipments. Features include authentication, adding to cart, payment gateways etc.",
     githubUrl: "https://github.com/ikecodes/broadcast-nigeria_frontend",
     liveUrl: "https://broadcastnigeria.vercel.app/",
     stacks: ["React", "Redux", "CSS modules", "Node.js/Express", "MongoDb"],

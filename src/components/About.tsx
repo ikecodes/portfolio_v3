@@ -13,24 +13,22 @@ const About = () => {
       <div className='row justify-content-start align-items-center'>
         <div className='col-lg-8 mb-5'>
           <Text>
-            My name is Onuorah Emmanuel Ikechukwu and I enjoy building and
-            making things work on the internet. My interest in software
-            development started back in 2019 when I decided to try building a
-            simple landing page from a youtube video I stumbled upon — making
-            every UI element was so much fun and taught me alot!
+            I am Ikechukwu and I enjoy building applications. My interest in
+            software development started back in 2019 when I built a landing
+            page from a youtube video I stumbled upon — making every UI element
+            was so much fun and taught me alot!
           </Text>
           <Text>
-            Fast-forward to today, and I’ve had the privilege of working at a
-            number of companies. I've also had the opportunity to work on
-            several projects as a freelancer.
+            Fast-forward to today, I have gained strong experience building user
+            friendly and accessible front-end for web and mobile applications
+            using react and react native respectively. I also have good
+            background in building solid and scalable back-end using Node.js
           </Text>
           <Text>
-            I have gained strong experience building user friendly and
-            accessible front-end for web and mobile applications using react and
-            react native respectively. I also have good background in building
-            solid and scalable back-end using Node.js
+            I enjoy working in teams because I get to learn alot from others. I
+            also love learning new technologies. Here are a few technologies I
+            use frequently:
           </Text>
-          <Text>Here are a few technologies I use frequently:</Text>
           <List>
             <ListItem>
               <li>

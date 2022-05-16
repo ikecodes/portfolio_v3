@@ -18,7 +18,7 @@ const Hero = () => {
           building (and occasionally designing) awesome
           <WhiteHighlight> web</WhiteHighlight> &
           <WhiteHighlight> mobile applications</WhiteHighlight>. Currently, I’m
-          focused on building accessible, human-centered products at{" "}
+          focused on building accessible, scalable, human-centered product at{" "}
           <LinkHighlight text='buzzline' link='https://www.buzzline.app/' />
         </Text>
         <a href='mailto:ikecodes@gmail.com'>
