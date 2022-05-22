@@ -10,7 +10,11 @@ interface BtnProps {
   active?: boolean;
 }
 const Button: React.FC<Props> = ({ children, active }) => {
-  return <Btn active={active}>{children}</Btn>;
+  return (
+    <Btn className='rounded' active={active}>
+      {children}
+    </Btn>
+  );
 };
 
 const Btn = styled.button<BtnProps>`

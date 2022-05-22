@@ -4,7 +4,7 @@ import About from "../components/About";
 import Hero from "../components/Hero";
 import Layout from "../layouts/Layout";
 import Work from "../components/Work";
-import BackgroundImg from "../assets/images/background.jpeg";
+// import BackgroundImg from "../assets/images/background.jpeg";
 import colors from "../constants/colors";
 import Contact from "../components/Contact";
 import Spinner from "../shared/Spinner";
@@ -31,7 +31,7 @@ const Home = () => {
 };
 
 const Container = styled.div`
-  background-image: url(${BackgroundImg});
+  background-image: url("https://res.cloudinary.com/djwxy9aol/image/upload/v1653257338/lpebxj9qlqydm73pawhz.jpg");
   /* background-color: ${colors.dark}; */
   background-position: center;
   border: 2px solid ${colors.primary};

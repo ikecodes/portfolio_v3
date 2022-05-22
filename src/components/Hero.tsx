@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Container from "../layouts/Container";
 import Text from "../shared/Text";
-import LinkHighlight from "../shared/LinkHighlight";
+// import LinkHighlight from "../shared/LinkHighlight";
 import WhiteHighlight from "../shared/WhiteHighlight";
 import colors from "../constants/colors";
 import Button from "../shared/Button";
@@ -17,9 +17,10 @@ const Hero = () => {
           a <WhiteHighlight> software engineer</WhiteHighlight> specializing in
           building (and occasionally designing) awesome
           <WhiteHighlight> web</WhiteHighlight> &
-          <WhiteHighlight> mobile applications</WhiteHighlight>. Currently, I’m
+          <WhiteHighlight> mobile applications</WhiteHighlight>.
+          {/* Currently, I’m
           focused on building accessible, scalable, human-centered product at{" "}
-          <LinkHighlight text='buzzline' link='https://www.buzzline.app/' />
+          <LinkHighlight text='buzzline' link='https://www.buzzline.app/' /> */}
         </Text>
         <a href='mailto:ikecodes@gmail.com'>
           <Button active>contact me</Button>
