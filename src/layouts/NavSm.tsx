@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-scroll";
 import styled from "styled-components";
 import menus from "../constants/menus";
-import BackgroundImg from "../assets/images/background.jpeg";
 import colors from "../constants/colors";
 import { FaGithubSquare, FaLinkedin, FaTwitterSquare } from "react-icons/fa";
 import { ImMail } from "react-icons/im";
@@ -97,7 +96,7 @@ const NavContainer = styled.div`
   position: relative;
   width: 100%;
   height: 100vh;
-  background-image: url(${BackgroundImg});
+  background-color: ${colors.box};
   position: absolute;
   display: flex;
   flex-direction: column;

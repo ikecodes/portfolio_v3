@@ -13,7 +13,7 @@ const Home = () => {
   const [loading, setloading] = useState(true);
   setTimeout(() => {
     setloading(false);
-  }, 5000);
+  }, 3000);
   if (loading) return <Spinner />;
 
   return (
@@ -31,8 +31,8 @@ const Home = () => {
 };
 
 const Container = styled.div`
-  background-image: url("https://res.cloudinary.com/djwxy9aol/image/upload/v1653257338/lpebxj9qlqydm73pawhz.jpg");
-  /* background-color: ${colors.dark}; */
+  /* background-image: url("https://res.cloudinary.com/djwxy9aol/image/upload/v1653257338/lpebxj9qlqydm73pawhz.jpg"); */
+  background-color: ${colors.dark};
   background-position: center;
   border: 2px solid ${colors.primary};
   color: ${colors.light};

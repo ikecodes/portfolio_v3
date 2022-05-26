@@ -5,7 +5,6 @@ import Logo from "../assets/images/logo-placeholder.png";
 import NavItemLg from "./NavItemLg";
 import menus from "../constants/menus";
 import Button from "../shared/Button";
-import BgImg from "../assets/images/background.jpeg";
 import colors from "../constants/colors";
 import NavSm from "./NavSm";
 import urls from "../constants/urls";
@@ -81,7 +80,7 @@ const NavContainer = styled.nav`
   border-left: 2px solid ${colors.primary};
   border-right: 2px solid ${colors.primary};
   border-top: 2px solid ${colors.primary};
-  background-image: url(${BgImg});
+  background-color: ${colors.dark};
   transition: all 0.3s ease-in;
   &.noShow {
     /* visibility: hidden;
