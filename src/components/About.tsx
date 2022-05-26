@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-// import Me from "../assets/images/me.jpeg";
+import Me from "../assets/images/profile.jpeg";
 import colors from "../constants/colors";
 import Header from "../shared/Header";
 import Text from "../shared/Text";
@@ -65,61 +65,66 @@ const About = () => {
             </ListItem>
           </List>
         </div>
-        {/* <div className='col-lg-4 text-center'>
+        <div className='col-lg-4 text-center'>
           <ImageBox>
             <Image src={Me} />
           </ImageBox>
-        </div> */}
+        </div>
       </div>
     </div>
   );
 };
 
-// const ImageBox = styled.div`
-//   position: relative;
-//   height: 15rem;
-//   width: 15rem;
-//   margin-bottom: 15rem;
-//   z-index: 2;
-//   &:hover::before {
-//     top: 10%;
-//     left: 10%;
-//   }
-//   &:hover::after {
-//     background-color: transparent;
-//   }
-//   &::before {
-//     position: absolute;
-//     content: " ";
-//     z-index: 1;
-//     height: 100%;
-//     width: 100%;
-//     border: 2px solid ${colors.primary};
-//     top: 20%;
-//     left: 20%;
-//     transition: all 0.3s ease-in;
-//   }
-//   &::after {
-//     position: absolute;
-//     content: " ";
-//     z-index: 4;
-//     height: 100%;
-//     width: 100%;
-//     background-color: ${colors.primaryLight};
-//     top: 0;
-//     left: 0;
-//     transition: all 0.3s ease-in;
-//   }
-// `;
-// const Image = styled.img`
-//   position: absolute;
-//   height: 100%;
-//   width: 100%;
-//   object-fit: cover;
-//   z-index: 3;
-//   top: 0;
-//   left: 0;
-// `;
+const ImageBox = styled.div`
+  position: relative;
+  height: 8rem;
+  width: 8rem;
+  margin-bottom: 15rem;
+  border-radius: 50%;
+
+  z-index: 2;
+  &:hover::before {
+    top: 10%;
+    left: 10%;
+  }
+  &:hover::after {
+    background-color: transparent;
+  }
+  &::before {
+    position: absolute;
+    content: " ";
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    border: 2px solid ${colors.primary};
+    top: 20%;
+    left: 20%;
+    border-radius: 50%;
+    transition: all 0.3s ease-in;
+  }
+  &::after {
+    position: absolute;
+    content: " ";
+    z-index: 4;
+    height: 100%;
+    width: 100%;
+    background-color: ${colors.primaryLight};
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    transition: all 0.3s ease-in;
+  }
+`;
+const Image = styled.img`
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  z-index: 3;
+  top: 0;
+  left: 0;
+`;
 const List = styled.ul`
   list-style: none;
   list-style-type: "</> ";
