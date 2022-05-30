@@ -12,12 +12,14 @@ import urls from "../constants/urls";
 const Nav = () => {
   const [show, setShow] = useState(true);
   const [isAnimating, setIsAnimating] = useState(false);
+  const [pageY, setPageY] = useState(0);
 
   let oldValue = 0;
   let newValue = 0;
   const controlNav = () => {
     window.addEventListener("scroll", (e) => {
       newValue = window.pageYOffset;
+      setPageY(window.pageYOffset);
       if (oldValue < newValue) {
         // console.log("Up");
         setShow(false);
@@ -39,7 +41,9 @@ const Nav = () => {
   }, []);
   return (
     <NavContainer
-      className={`${show === true || isAnimating === true ? "" : "noShow"}`}
+      className={`${show === true || isAnimating === true ? "" : "noShow"} ${
+        show === true && pageY !== 0 ? "shadow" : ""
+      }`}
     >
       <Wrapper>
         <div className='row p-0 m-0 py-3 align-items-center'>
