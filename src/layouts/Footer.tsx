@@ -17,6 +17,7 @@ const Container = styled.div`
   text-align: center;
   & p {
     font-size: 1rem;
+    margin: 0;
   }
   color: ${colors.primary};
 `;
