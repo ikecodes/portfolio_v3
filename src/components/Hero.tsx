@@ -10,27 +10,32 @@ import Button from "../shared/Button";
 const Hero = () => {
   return (
     <Container>
-      <Hello className='m-0'>👋🏾 Hello, I'm</Hello>
-      <Header className='text-capitalize mb-0 m-0'>onuorah ikechukwu</Header>
-      <Width className='mt-4'>
-        <Text>
-          a <WhiteHighlight> software engineer</WhiteHighlight> specializing in
-          building (and occasionally designing) awesome
-          <WhiteHighlight> web</WhiteHighlight> &
-          <WhiteHighlight> mobile applications</WhiteHighlight>.
-          {/* Currently, I’m
+      <Box>
+        <Hello className='m-0'>👋🏾 Hello, I'm</Hello>
+        <Header className='text-capitalize mb-0 m-0'>onuorah ikechukwu</Header>
+        <Width className='mt-4'>
+          <Text>
+            a <WhiteHighlight> software engineer</WhiteHighlight> specializing
+            in building (and occasionally designing) awesome
+            <WhiteHighlight> web</WhiteHighlight> &
+            <WhiteHighlight> mobile applications</WhiteHighlight>.
+            {/* Currently, I’m
           focused on building accessible, scalable, human-centered product at{" "}
           <LinkHighlight text='buzzline' link='https://www.buzzline.app/' /> */}
-        </Text>
-        <a href='mailto:ikecodes@gmail.com'>
-          <Button active>contact me</Button>
-        </a>
-      </Width>
+          </Text>
+          <a href='mailto:ikecodes@gmail.com'>
+            <Button active>contact me</Button>
+          </a>
+        </Width>
+      </Box>
     </Container>
   );
 };
+const Box = styled.div`
+  margin-top: 10rem;
+`;
 const Header = styled.h1`
-  color: ${colors.primary};
+  color: ${colors.light};
   font-size: 7rem;
   font-weight: 900;
   @media (max-width: 1200px) {
@@ -47,7 +52,7 @@ const Width = styled.div`
   max-width: 700px;
 `;
 const Hello = styled.h2`
-  color: ${colors.light};
+  color: ${colors.primary};
   font-weight: 900;
 `;
 

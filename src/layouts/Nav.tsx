@@ -77,9 +77,9 @@ const NavContainer = styled.nav`
   top: 0;
   left: 0;
   z-index: 10;
-  border-left: 2px solid ${colors.primary};
+  /* border-left: 2px solid ${colors.primary};
   border-right: 2px solid ${colors.primary};
-  border-top: 2px solid ${colors.primary};
+  border-top: 2px solid ${colors.primary}; */
   background-color: ${colors.dark};
   transition: all 0.3s ease-in;
   &.noShow {

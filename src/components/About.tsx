@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Me from "../assets/images/profile.jpeg";
+import Me from "../assets/images/me.jpg";
 import colors from "../constants/colors";
 import Header from "../shared/Header";
 import Text from "../shared/Text";
@@ -77,8 +77,8 @@ const About = () => {
 
 const ImageBox = styled.div`
   position: relative;
-  height: 8rem;
-  width: 8rem;
+  height: 10rem;
+  width: 10rem;
   margin-bottom: 15rem;
   border-radius: 50%;
 
