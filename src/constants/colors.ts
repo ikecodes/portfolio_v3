@@ -7,6 +7,8 @@ const colors = {
   dim: "#777775",
   grey: "#F2F2F2",
   green: "#6ff6a7",
+  black: "#000000",
+  white: "#ffffff",
 };
 
 export default colors;

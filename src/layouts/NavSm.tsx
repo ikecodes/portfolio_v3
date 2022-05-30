@@ -96,7 +96,7 @@ const NavContainer = styled.div`
   position: relative;
   width: 100%;
   height: 100vh;
-  background-color: ${colors.box};
+  background-color: ${colors.black};
   position: absolute;
   display: flex;
   flex-direction: column;
