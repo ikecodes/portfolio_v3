@@ -17,6 +17,10 @@ const Work = () => {
   return (
     <div className='my-5' id='work'>
       <Header>some things i've built</Header>
+      <Ps>
+        Please note the content for some of these have not been updated, but all
+        funtionalities work.
+      </Ps>
       <List>
         {works.map((work) => (
           <ListItem
@@ -97,5 +101,8 @@ const Stack = styled.div`
   & span {
     font-size: 1rem;
   }
+`;
+const Ps = styled.p`
+  font-size: 0.7rem;
 `;
 export default Work;
