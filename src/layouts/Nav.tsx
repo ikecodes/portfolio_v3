@@ -8,6 +8,7 @@ import Button from "../shared/Button";
 import colors from "../constants/colors";
 import NavSm from "./NavSm";
 import urls from "../constants/urls";
+import { motion } from "framer-motion";
 
 const Nav = () => {
   const [show, setShow] = useState(true);
@@ -49,10 +50,22 @@ const Nav = () => {
         <div className='row p-0 m-0 py-3 align-items-center'>
           <div className='col-lg-4 m-0 p-0'>
             <Link to='/'>
-              <Image src={Logo} />
+              <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 1 }}
+              >
+                <Image src={Logo} />
+              </motion.div>
             </Link>
           </div>
-          <div className='col-lg-8 align-self-center p-0'>
+          <motion.div
+            className='col-lg-8 align-self-center p-0'
+            initial={{ opacity: 0, x: 5 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+          >
             <NavMenu>
               <ul className='d-flex justify-content-end gap-4 align-items-center'>
                 {menus.map((menu) => (
@@ -63,7 +76,7 @@ const Nav = () => {
                 </a>
               </ul>
             </NavMenu>
-          </div>
+          </motion.div>
         </div>
         <NavIcon
           className={`${isAnimating ? "active" : ""}`}

@@ -5,6 +5,7 @@ import Text from "../shared/Text";
 import { IoMdEye, IoMdCode } from "react-icons/io";
 import colors from "../constants/colors";
 import works from "../constants/works";
+import { motion } from "framer-motion";
 
 interface Props {
   title: string;
@@ -17,10 +18,10 @@ const Work = () => {
   return (
     <div className='my-5' id='work'>
       <Header>some things i've built</Header>
-      <Ps>
+      {/* <Ps>
         Please note the content for some of these have not been updated, but all
         funtionalities work.
-      </Ps>
+      </Ps> */}
       <List>
         {works.map((work) => (
           <ListItem
@@ -45,7 +46,13 @@ const ListItem: React.FC<Props> = ({
   stacks,
 }) => {
   return (
-    <li>
+    <motion.li
+      initial={{ opacity: 0, y: 10 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ delay: 0.5 }}
+      whileHover={{ scale: 1.1, boxShadow: "0 0 3px #ccc" }}
+    >
       <Head className='text-capitalize'>{title}</Head>
       <Text>{description}</Text>
       <div className='d-flex gap-4'>
@@ -66,7 +73,7 @@ const ListItem: React.FC<Props> = ({
           <span key={stack}>{stack}</span>
         ))}
       </Stack>
-    </li>
+    </motion.li>
   );
 };
 
@@ -102,7 +109,7 @@ const Stack = styled.div`
     font-size: 1rem;
   }
 `;
-const Ps = styled.p`
-  font-size: 0.7rem;
-`;
+// const Ps = styled.p`
+//   font-size: 0.7rem;
+// `;
 export default Work;

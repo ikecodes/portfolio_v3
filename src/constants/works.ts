@@ -8,15 +8,6 @@ const works: {
 }[] = [
   {
     id: 1,
-    title: "grooming endownment trust",
-    description:
-      "This is a Trust fund web app. Features include grant application and updates, blog. Also comes with a custom dashboard designed by me for CRUD operations on the admin side.",
-    githubUrl: "https://github.com/ikecodes/grooming_endowment_trust",
-    liveUrl: "https://www.groomingendowment.org/home",
-    stacks: ["React", "Bootstrap", "Styled-Components", "Firebase"],
-  },
-  {
-    id: 2,
     title: "spid realty",
     description:
       "Spid Realty is a real estate, housing and investment company. Features include authentication, property upload, agent and property verification, property promotion with scheduler etc. I also design and implemented a custom admin dashboard for this web app.",
@@ -30,6 +21,15 @@ const works: {
       "Node.js/Express",
       "MongoDb",
     ],
+  },
+  {
+    id: 2,
+    title: "grooming endownment trust",
+    description:
+      "This is a Trust fund web app. Features include grant application and updates, blog. Also comes with a custom dashboard designed by me for CRUD operations on the admin side.",
+    githubUrl: "https://github.com/ikecodes/grooming_endowment_trust",
+    liveUrl: "https://www.groomingendowment.org/home",
+    stacks: ["React", "Bootstrap", "Styled-Components", "Firebase"],
   },
   {
     id: 3,

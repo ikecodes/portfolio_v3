@@ -3,11 +3,19 @@ import urls from "../constants/urls";
 import Container from "../layouts/Container";
 import Header from "../shared/Header";
 import LinkHighlight from "../shared/LinkHighlight";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
     <Container>
-      <div className='my-5' id='contact'>
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.5 }}
+        className='my-5'
+        id='contact'
+      >
         <Header>get in touch</Header>
         <div className='my-5'>
           <div className='d-flex gap-5 flex-wrap'>
@@ -25,7 +33,7 @@ const Contact = () => {
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </Container>
   );
 };
