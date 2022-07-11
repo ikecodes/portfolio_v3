@@ -2,15 +2,16 @@ import React from "react";
 import styled from "styled-components";
 import Header from "../shared/Header";
 import Text from "../shared/Text";
-import { IoMdEye, IoMdCode } from "react-icons/io";
 import colors from "../constants/colors";
 import works from "../constants/works";
 import { motion } from "framer-motion";
+import { FaCodeBranch, FaEye } from "react-icons/fa";
 
 interface Props {
   title: string;
   description: string;
-  githubUrl: string;
+  clientUrl: string;
+  serverUrl: string;
   liveUrl: string;
   stacks: string[];
 }
@@ -28,7 +29,8 @@ const Work = () => {
             key={work.id}
             title={work.title}
             description={work.description}
-            githubUrl={work.githubUrl}
+            clientUrl={work.clientUrl}
+            serverUrl={work.serverUrl}
             liveUrl={work.liveUrl}
             stacks={work.stacks}
           />
@@ -41,7 +43,8 @@ const Work = () => {
 const ListItem: React.FC<Props> = ({
   title,
   description,
-  githubUrl,
+  clientUrl,
+  serverUrl,
   liveUrl,
   stacks,
 }) => {
@@ -56,15 +59,21 @@ const ListItem: React.FC<Props> = ({
       <Head className='text-capitalize'>{title}</Head>
       <Text>{description}</Text>
       <div className='d-flex gap-4'>
-        {githubUrl !== "" && (
-          <a href={githubUrl} rel='noreferrer' target='_blank'>
-            <IoMdCode size={15} color={colors.primary} />
-            <span>code</span>
+        {clientUrl !== "" && (
+          <a href={clientUrl} rel='noreferrer' target='_blank'>
+            <FaCodeBranch size={15} color={colors.primary} />
+            <span>client</span>
+          </a>
+        )}
+        {serverUrl !== "" && (
+          <a href={serverUrl} rel='noreferrer' target='_blank'>
+            <FaCodeBranch size={15} color={colors.primary} />
+            <span>api</span>
           </a>
         )}
 
         <a href={liveUrl} rel='noreferrer' target='_blank'>
-          <IoMdEye size={15} color={colors.primary} />
+          <FaEye size={15} color={colors.primary} />
           <span>live</span>
         </a>
       </div>
@@ -95,7 +104,7 @@ const List = styled.ul`
     & span {
       font-size: 0.8rem;
       margin-left: 0.2rem;
-      text-transform: capitalize;
+      /* text-transform: capitalize; */
     }
   }
 `;
