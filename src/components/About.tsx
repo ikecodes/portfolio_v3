@@ -27,7 +27,7 @@ const About = () => {
           <Text>
             Fast-forward to today, I have gained strong experience building user
             friendly and accessible front-end for web and mobile applications
-            using react and react native respectively. I also have good
+            using react and react native respectively. I also have strong
             background in building solid and scalable back-end using Node.js
           </Text>
           <Text>
