@@ -31,7 +31,7 @@ const works: {
       "This is a Trust fund web app. Features include grant application and updates, blog. Also comes with a custom dashboard designed by me for CRUD operations on the admin side.",
     clientUrl: "https://github.com/ikecodes/grooming_endowment_trust",
     serverUrl: "",
-    liveUrl: "https://www.groomingendowment.org/home",
+    liveUrl: "https://www.groomingendowment.org",
     stacks: ["React", "Bootstrap", "Styled-Components", "Firebase"],
   },
   {
