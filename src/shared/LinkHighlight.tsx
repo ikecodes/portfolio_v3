@@ -22,7 +22,7 @@ const HightLight = styled.a<LinkProps>`
   color: ${colors.primary};
   font-weight: 500;
   text-decoration: none;
-  font-size: ${(props) => (props.lg ? "2rem" : "1.1rem")};
+  font-size: ${(props) => (props.lg ? "2rem" : "1rem")};
   text-transform: capitalize;
   &:hover {
     color: ${colors.primary};

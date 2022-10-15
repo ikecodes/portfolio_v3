@@ -18,7 +18,7 @@ interface Props {
 const Work = () => {
   return (
     <div className='my-5' id='work'>
-      <Header>some things i've built</Header>
+      <Header>some projects i've worked on</Header>
       {/* <Ps>
         Please note the content for some of these have not been updated, but all
         funtionalities work.
@@ -54,7 +54,6 @@ const ListItem: React.FC<Props> = ({
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ delay: 0.5 }}
-      whileHover={{ scale: 1.1, boxShadow: "0 0 3px #ccc" }}
     >
       <Head className='text-capitalize'>{title}</Head>
       <Text>{description}</Text>
@@ -91,10 +90,10 @@ const List = styled.ul`
   margin: 0;
   padding: 0;
   & li {
-    list-style: none;
+    list-style: decimal-leading-zero;
     max-width: 700px;
     border-bottom: 1px solid ${colors.primary};
-    background-color: ${colors.box};
+    /* background-color: ${colors.box}; */
     margin-bottom: 3rem;
     padding: 1rem;
     & a {

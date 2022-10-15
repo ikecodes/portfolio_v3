@@ -27,11 +27,12 @@ const NavItem = styled.li`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   text-transform: capitalize;
+  transform-origin: left;
   font-size: 1rem;
   &:hover div {
-    transform: scaleX(-3);
+    width: 100%;
     opacity: 1;
   }
   & a {
@@ -39,16 +40,12 @@ const NavItem = styled.li`
     text-decoration: none;
     transition: all 0.3s ease-in;
   }
-  /* &.active div {
-    transform: scaleX(-3);
-    opacity: 1;
-  } */
 `;
 const MenuLine = styled.div`
   height: 3px;
   border-radius: 5px;
-  opacity: 0;
-  width: 10px;
+  opacity: 1;
+  width: 0px;
   background-color: ${colors.primary};
   transition: all 0.2s linear;
 `;

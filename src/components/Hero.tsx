@@ -28,15 +28,16 @@ const Hero = () => {
           <Header className='text-capitalize mb-0 m-0'>
             onuorah ikechukwu
           </Header>
-          <Width className='mt-4'>
+          <Width className='mt-2'>
             <Text>
               a <WhiteHighlight> software engineer</WhiteHighlight> specializing
               in building (and occasionally designing) awesome
               <WhiteHighlight> web</WhiteHighlight> &
-              <WhiteHighlight> mobile applications</WhiteHighlight>.
-              {/* Currently, I’m
-          focused on building accessible, scalable, human-centered product at{" "}
-          <LinkHighlight text='buzzline' link='https://www.buzzline.app/' /> */}
+              <WhiteHighlight> mobile applications</WhiteHighlight>. <br /> I
+              convert high quality design to{" "}
+              <WhiteHighlight>pixel perfect</WhiteHighlight> code and write
+              <WhiteHighlight> scalable</WhiteHighlight> &{" "}
+              <WhiteHighlight>secure</WhiteHighlight> APIs.
             </Text>
             <a href='mailto:ikecodes@gmail.com'>
               <Button active>contact me</Button>
@@ -65,7 +66,7 @@ const Header = styled.h1`
   }
 `;
 const Width = styled.div`
-  max-width: 700px;
+  /* max-width: 700px; */
 `;
 const Hello = styled.h2`
   color: ${colors.primary};

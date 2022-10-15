@@ -139,15 +139,15 @@ const Image = styled.img`
   left: 0;
 `;
 const List = styled.ul`
-  list-style: none;
-  list-style-type: "</> ";
+  list-style: decimal-leading-zero;
+  /* list-style-type: "</> "; */
   font-size: 1rem;
   color: ${colors.dim};
   & div:not(:last-child) {
     margin-bottom: 1rem;
   }
   & li {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 `;
 const ListItem = styled.div`
