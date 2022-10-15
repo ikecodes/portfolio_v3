@@ -33,8 +33,8 @@ const About = () => {
             background in building solid and scalable back-end using Node.js
           </Text>
           <Text>
-            I enjoy working in teams and learning new technologies. Here are a
-            few technologies I use frequently:
+            I enjoy working in teams and learning new technologies. Here are
+            some technologies I use:
           </Text>
           <List>
             {technologies.map((tech) => (
@@ -118,10 +118,10 @@ const List = styled.ul`
   /* list-style-type: "</> "; */
   color: ${colors.dim};
   & div:not(:last-child) {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
   }
   & li {
-    font-size: 0.1rem;
+    font-size: 1rem;
   }
 `;
 const ListItem = styled.div`

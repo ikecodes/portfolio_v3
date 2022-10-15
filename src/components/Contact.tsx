@@ -18,18 +18,31 @@ const Contact = () => {
       >
         <Header>get in touch</Header>
         <div className='my-5'>
-          <div className='d-flex gap-5 flex-wrap'>
-            <div className='mb-2'>
-              <LinkHighlight lg text='github' link={urls.github} />
-            </div>
-            <div className='mb-2'>
-              <LinkHighlight lg text='linkedin' link={urls.linkedin} />
-            </div>
-            <div className='mb-2'>
-              <LinkHighlight lg text='twitter' link={urls.twitter} />
-            </div>
-            <div className='mb-2'>
-              <LinkHighlight lg text='email' link={urls.email} />
+          <div className='row'>
+            <div className='col-lg-6'>
+              <div className='row'>
+                <div className='col-lg-3'>
+                  <div className='mb-5'>
+                    <LinkHighlight lg text='github' link={urls.github} />
+                  </div>
+                </div>
+                <div className='col-lg-3'>
+                  <div className='mb-5'>
+                    <LinkHighlight lg text='linkedin' link={urls.linkedin} />
+                  </div>
+                </div>
+                <div className='col-lg-3'>
+                  <div className='mb-5'>
+                    <LinkHighlight lg text='twitter' link={urls.twitter} />
+                  </div>
+                </div>
+                <div className='col-lg-3'>
+                  {" "}
+                  <div className='mb-5'>
+                    <LinkHighlight lg text='email' link={urls.email} />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
