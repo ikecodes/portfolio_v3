@@ -87,8 +87,8 @@ const ListItem: React.FC<Props> = ({
 
 const List = styled.ul`
   color: ${colors.dim};
-  margin: 0;
-  padding: 0;
+  /* margin: 0;
+  padding: 0; */
   & li {
     list-style: decimal-leading-zero;
     max-width: 700px;
