@@ -6,6 +6,7 @@ import Header from "../shared/Header";
 import Text from "../shared/Text";
 import WhiteHighlight from "../shared/WhiteHighlight";
 import { motion } from "framer-motion";
+import technologies from "../constants/technologies";
 
 const About = () => {
   return (
@@ -21,8 +22,9 @@ const About = () => {
         >
           <Text>
             I am Ikechukwu, a software engineer from Nigeria. I graduated from
-            the University of Nigeria with a BSc in Computer Science. After my
-            graduation in 2019, I went full-time into software development.
+            the University of Nigeria with a Bachelor of Sciences in Computer
+            Science. After my graduation in 2019, I went full-time into software
+            development.
           </Text>
           <Text>
             Fast-forward to today, I have gained strong experience building user
@@ -35,41 +37,13 @@ const About = () => {
             few technologies I use frequently:
           </Text>
           <List>
-            <ListItem>
-              <li>
-                <WhiteHighlight>Javascript (ES6+)</WhiteHighlight>
-              </li>
-            </ListItem>
-            <ListItem>
-              <li>
-                <WhiteHighlight>TypeScript</WhiteHighlight>
-              </li>
-            </ListItem>
-            <ListItem>
-              <li>
-                <WhiteHighlight>React</WhiteHighlight>
-              </li>
-            </ListItem>
-            <ListItem>
-              <li>
-                <WhiteHighlight>Redux</WhiteHighlight>
-              </li>
-            </ListItem>
-            <ListItem>
-              <li>
-                <WhiteHighlight>React Native</WhiteHighlight>
-              </li>
-            </ListItem>
-            <ListItem>
-              <li>
-                <WhiteHighlight>Node.js/Express</WhiteHighlight>
-              </li>
-            </ListItem>
-            <ListItem>
-              <li>
-                <WhiteHighlight>MongoDb/Mongoose</WhiteHighlight>
-              </li>
-            </ListItem>
+            {technologies.map((tech) => (
+              <ListItem key={tech.id}>
+                <li>
+                  <WhiteHighlight>{tech.value}</WhiteHighlight>
+                </li>
+              </ListItem>
+            ))}
           </List>
         </motion.div>
         <motion.div
@@ -139,15 +113,15 @@ const Image = styled.img`
   left: 0;
 `;
 const List = styled.ul`
-  list-style: decimal-leading-zero;
+  list-style: none;
+  padding: 0;
   /* list-style-type: "</> "; */
-  font-size: 1rem;
   color: ${colors.dim};
   & div:not(:last-child) {
     margin-bottom: 1rem;
   }
   & li {
-    font-size: 1rem;
+    font-size: 0.1rem;
   }
 `;
 const ListItem = styled.div`
