@@ -3,8 +3,8 @@ import { Link } from "react-scroll";
 import styled from "styled-components";
 import menus from "../constants/menus";
 import colors from "../constants/colors";
-import { FaGithubSquare, FaLinkedin, FaTwitterSquare } from "react-icons/fa";
-import { ImMail } from "react-icons/im";
+// import { FaGithubSquare, FaLinkedin, FaTwitterSquare } from "react-icons/fa";
+import { BsGithub, BsLinkedin, BsTwitter } from "react-icons/bs";
 import urls from "../constants/urls";
 
 interface Props {
@@ -35,21 +35,21 @@ const NavSm: React.FC<Props> = ({ isAnimating, setIsAnimating }) => {
             </a>
           </Heading>
           <div className='ms-3 d-flex gap-3'>
-            <IconLink
+            {/* <IconLink
               href={urls.email}
               target='_blank'
               rel='noreferrer'
               color={colors.light}
             >
-              <ImMail size={30} />
-            </IconLink>
+              <BsMailbox size={25} />
+            </IconLink> */}
             <IconLink
               href={urls.github}
               target='_blank'
               rel='noreferrer'
               color={colors.light}
             >
-              <FaGithubSquare size={30} />
+              <BsGithub size={25} />
             </IconLink>
             <IconLink
               href={urls.linkedin}
@@ -57,7 +57,7 @@ const NavSm: React.FC<Props> = ({ isAnimating, setIsAnimating }) => {
               rel='noreferrer'
               color={colors.light}
             >
-              <FaLinkedin size={30} />
+              <BsLinkedin size={25} />
             </IconLink>
             <IconLink
               href={urls.twitter}
@@ -65,7 +65,7 @@ const NavSm: React.FC<Props> = ({ isAnimating, setIsAnimating }) => {
               rel='noreferrer'
               color={colors.light}
             >
-              <FaTwitterSquare size={30} />
+              <BsTwitter size={25} />
             </IconLink>
           </div>
         </NavContainer>

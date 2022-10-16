@@ -5,6 +5,7 @@ const works: {
   clientUrl: string;
   serverUrl: string;
   liveUrl: string;
+  openSource: boolean;
   stacks: string[];
 }[] = [
   {
@@ -15,6 +16,7 @@ const works: {
     clientUrl: "",
     serverUrl: "",
     liveUrl: "https://www.spidrealty.com",
+    openSource: false,
     stacks: [
       "React",
       "Bootstrap",
@@ -32,6 +34,7 @@ const works: {
     clientUrl: "https://github.com/ikecodes/grooming_endowment_trust",
     serverUrl: "",
     liveUrl: "https://www.groomingendowment.org",
+    openSource: true,
     stacks: ["React", "Bootstrap", "Styled-Components", "Firebase"],
   },
   {
@@ -43,6 +46,7 @@ const works: {
     serverUrl: "",
     liveUrl:
       "https://play.google.com/store/apps/details?id=com.buzzline&hl=en&gl=US",
+    openSource: false,
     stacks: ["React Native", "Node.js/Express", "MongoDb"],
   },
   {
@@ -53,6 +57,7 @@ const works: {
     clientUrl: "",
     serverUrl: "https://github.com/ikecodes/xaron_backend",
     liveUrl: "https://apps.apple.com/ng/app/xaron/id1624015119",
+    openSource: false,
     stacks: ["React", "Bootstrap", "Socket.io", "Node.js/Express", "MongoDb"],
   },
   {
@@ -63,6 +68,7 @@ const works: {
     clientUrl: "https://github.com/ikecodes/broadcast-nigeria_frontend",
     serverUrl: "https://github.com/ikecodes/broadcast-nigeria_backend",
     liveUrl: "https://broadcastnigeria.vercel.app/",
+    openSource: true,
     stacks: ["React", "Redux", "CSS modules", "Node.js/Express", "MongoDb"],
   },
   {
@@ -73,6 +79,7 @@ const works: {
     clientUrl: "",
     serverUrl: "",
     liveUrl: "https://apps.apple.com/us/app/friendstart/id1643136304",
+    openSource: false,
     stacks: ["Node.js/Express", "MongoDb"],
   },
   {
@@ -83,6 +90,7 @@ const works: {
     clientUrl: "https://github.com/ikecodes/ecommerce",
     serverUrl: "",
     liveUrl: "https://ecomms.vercel.app/",
+    openSource: true,
     stacks: ["React", "Redux", "CSS modules", "Node.js/Express", "MongoDb"],
   },
 ];
