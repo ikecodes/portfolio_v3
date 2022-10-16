@@ -47,6 +47,6 @@ const MenuLine = styled.div`
   opacity: 1;
   width: 0px;
   background-color: ${colors.primary};
-  transition: all 0.2s linear;
+  transition: all 0.2s cubic-bezier(1, -0.77, 1, 1);
 `;
 export default NavItemLg;

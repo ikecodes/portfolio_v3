@@ -26,6 +26,7 @@ const Btn = styled.button<BtnProps>`
   transition: all 0.3s ease-in-out;
   &:hover {
     background-color: ${colors.primaryLight};
+    transform: scale(1.05);
   }
 `;
 export default Button;

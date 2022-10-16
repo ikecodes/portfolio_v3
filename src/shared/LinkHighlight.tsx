@@ -34,12 +34,12 @@ const HightLight = styled.a<LinkProps>`
   &::before {
     content: "";
     height: 50%;
-    width: 50%;
+    width: 20%;
     opacity: 1;
     bottom: 0;
     background-color: rgba(225, 225, 225, 0.2);
     position: absolute;
-    transition: all 0.2s ease-in;
+    transition: all 0.2s cubic-bezier(1, -0.77, 1, 1);
   }
 `;
 export default LinkHighlight;
