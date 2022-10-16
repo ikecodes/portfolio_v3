@@ -76,11 +76,11 @@ const ListItem: React.FC<Props> = ({
           <span>live</span>
         </a>
       </div>
-      <Stack className='d-flex gap-2 flex-wrap'>
+      {/* <Stack className='d-flex gap-2 flex-wrap'>
         {stacks.map((stack) => (
           <span key={stack}>{stack}</span>
         ))}
-      </Stack>
+      </Stack> */}
     </motion.li>
   );
 };
@@ -110,13 +110,13 @@ const List = styled.ul`
 const Head = styled.h5`
   color: ${colors.light};
 `;
-const Stack = styled.div`
-  color: ${colors.primary};
-  margin-top: 1rem;
-  & span {
-    font-size: 1rem;
-  }
-`;
+// const Stack = styled.div`
+//   color: ${colors.primary};
+//   margin-top: 1rem;
+//   & span {
+//     font-size: 1rem;
+//   }
+// `;
 // const Ps = styled.p`
 //   font-size: 0.7rem;
 // `;
