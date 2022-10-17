@@ -4,7 +4,7 @@ const urls = {
   twitter: "https://twitter.com/ikecodes",
   email: "mailto:hello@ikechukwu.dev",
   resume:
-    "https://docs.google.com/document/d/1xZypkFIVQMukzemqKSazl85HR2PFkiEcFq-JcY0JQnQ/edit?usp=sharing",
+    "https://drive.google.com/file/d/1uewrtm5qaSNSVckxVuQBpcfjBw9HGogK/view?usp=sharing",
 };
 
 export default urls;
