@@ -35,7 +35,7 @@ const Hero = () => {
               <WhiteHighlight> web</WhiteHighlight> &
               <WhiteHighlight> mobile applications</WhiteHighlight>. <br /> I
               convert high quality design to{" "}
-              <WhiteHighlight>pixel perfect</WhiteHighlight> code and write
+              <WhiteHighlight>seamless</WhiteHighlight> UI and write
               <WhiteHighlight> scalable</WhiteHighlight> &{" "}
               <WhiteHighlight>secure</WhiteHighlight> APIs.
             </Text>
