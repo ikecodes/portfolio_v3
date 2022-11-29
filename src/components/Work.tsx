@@ -107,7 +107,7 @@ const List = styled.ul`
     }
   }
 `;
-const Head = styled.h5`
+const Head = styled.h4`
   color: ${colors.light};
 `;
 // const Stack = styled.div`

@@ -23,7 +23,7 @@ section {
 body,
 body * {
   line-height: 1 !important;
-  font-family: "Montserrat", sans-serif !important;
+  font-family: "League Spartan", sans-serif !important;
 }
 blockquote,
 q {
@@ -44,7 +44,7 @@ li,
 span,
 p {
   font-size: 1rem;
-  line-height: 1.5 !important;
+  line-height: 2 !important;
 }
 
 /* website scrollbar */
