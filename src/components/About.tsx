@@ -21,20 +21,12 @@ const About = () => {
           className='col-lg-8 mb-5'
         >
           <Text>
-            I am Ikechukwu, a software engineer from Nigeria. I graduated from
-            the University of Nigeria with a Bachelor of Sciences in Computer
-            Science. After my graduation in 2019, I went full-time into software
-            development.
-          </Text>
-          <Text>
-            Fast-forward to today, I have gained strong experience building user
-            friendly and accessible front-end for web and mobile applications
-            using react and react native respectively. I also have strong
-            background in building solid and scalable back-end using Node.js
-          </Text>
-          <Text>
-            I enjoy working in teams and learning new technologies. Here are
-            some technologies I use:
+            I am Ikechukwu, a software engineer with 3+ years of experience. I
+            have strong experience building user friendly and accessible
+            front-end for web and mobile applications using react and react
+            native respectively. I also have strong background in building solid
+            and scalable Api's using Node.js. I enjoy working in teams and
+            learning new technologies. Here are some technologies I use:
           </Text>
           <List>
             {technologies.map((tech) => (

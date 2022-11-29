@@ -72,8 +72,8 @@ const ListItem: React.FC<Props> = ({
         )}
 
         <a href={liveUrl} rel='noreferrer' target='_blank'>
-          <FaEye size={15} color={colors.primary} />
-          <span>live</span>
+          <FaEye size={20} color={colors.primary} />
+          {/* <span>live</span> */}
         </a>
       </div>
       {/* <Stack className='d-flex gap-2 flex-wrap'>
