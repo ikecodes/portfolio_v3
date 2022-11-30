@@ -16,7 +16,7 @@ const Container = styled.div`
   text-transform: capitalize;
   text-align: center;
   & p {
-    font-size: 1.3rem;
+    font-size: 1rem;
     margin: 0;
   }
   color: ${colors.primary};
