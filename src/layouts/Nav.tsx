@@ -4,10 +4,10 @@ import styled from "styled-components";
 import Logo from "../assets/images/head.jpg";
 import NavItemLg from "./NavItemLg";
 import menus from "../constants/menus";
-import Button from "../shared/Button";
+// import Button from "../shared/Button";
 import colors from "../constants/colors";
 import NavSm from "./NavSm";
-import urls from "../constants/urls";
+// import urls from "../constants/urls";
 import { motion } from "framer-motion";
 
 const Nav = () => {
@@ -71,9 +71,9 @@ const Nav = () => {
                 {menus.map((menu) => (
                   <NavItemLg key={menu.id} menu={menu} />
                 ))}
-                <a href={urls.resume} target='_blank' rel='noreferrer'>
+                {/* <a href={urls.resume} target='_blank' rel='noreferrer'>
                   <Button>resume</Button>
-                </a>
+                </a> */}
               </ul>
             </NavMenu>
           </motion.div>

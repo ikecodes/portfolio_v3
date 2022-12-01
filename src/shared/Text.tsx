@@ -11,6 +11,6 @@ const Text: React.FC<Props> = ({ children }) => {
 };
 const Paragraph = styled.p`
   color: ${colors.dim};
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 `;
 export default Text;

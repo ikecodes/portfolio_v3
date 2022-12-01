@@ -30,7 +30,7 @@ const NavItem = styled.li`
   /* align-items: center; */
   text-transform: capitalize;
   transform-origin: left;
-  font-size: 1rem;
+  font-size: 1.5rem;
   &:hover div {
     width: 100%;
     opacity: 1;

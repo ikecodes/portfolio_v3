@@ -29,11 +29,11 @@ const NavSm: React.FC<Props> = ({ isAnimating, setIsAnimating }) => {
               </Heading>
             </div>
           ))}
-          <Heading className='ms-3'>
+          {/* <Heading className='ms-3'>
             <a href={urls.resume} target='_blank' rel='noreferrer'>
               resume
             </a>
-          </Heading>
+          </Heading> */}
           <div className='ms-3 d-flex gap-3'>
             {/* <IconLink
               href={urls.email}
@@ -49,7 +49,7 @@ const NavSm: React.FC<Props> = ({ isAnimating, setIsAnimating }) => {
               rel='noreferrer'
               color={colors.light}
             >
-              <BsGithub size={25} />
+              <BsGithub size={30} />
             </IconLink>
             <IconLink
               href={urls.linkedin}
@@ -57,7 +57,7 @@ const NavSm: React.FC<Props> = ({ isAnimating, setIsAnimating }) => {
               rel='noreferrer'
               color={colors.light}
             >
-              <BsLinkedin size={25} />
+              <BsLinkedin size={30} />
             </IconLink>
             <IconLink
               href={urls.twitter}
@@ -65,7 +65,7 @@ const NavSm: React.FC<Props> = ({ isAnimating, setIsAnimating }) => {
               rel='noreferrer'
               color={colors.light}
             >
-              <BsTwitter size={25} />
+              <BsTwitter size={30} />
             </IconLink>
           </div>
         </NavContainer>
@@ -112,7 +112,7 @@ const Heading = styled.h1`
   color: ${colors.light};
   text-transform: capitalize;
   font-weight: 600 !important;
-  font-size: 2rem;
+  font-size: 2.5rem;
   & a,
   a:link {
     color: ${colors.primary};

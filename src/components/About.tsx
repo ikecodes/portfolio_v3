@@ -110,10 +110,10 @@ const List = styled.ul`
   /* list-style-type: "</> "; */
   color: ${colors.dim};
   & div:not(:last-child) {
-    margin-bottom: 0.5rem;
+    /* margin-bottom: 0.5rem; */
   }
   & li {
-    font-size: 1rem;
+    font-size: 1rem !important;
   }
 `;
 const ListItem = styled.div`

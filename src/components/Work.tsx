@@ -18,7 +18,7 @@ interface Props {
 const Work = () => {
   return (
     <div className='my-5' id='work'>
-      <Header>some projects i've worked on</Header>
+      <Header>some projects</Header>
       {/* <Ps>
         Please note the content for some of these have not been updated, but all
         funtionalities work.
