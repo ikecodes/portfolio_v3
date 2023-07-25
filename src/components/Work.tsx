@@ -5,7 +5,8 @@ import Text from "../shared/Text";
 import colors from "../constants/colors";
 import works from "../constants/works";
 import { motion } from "framer-motion";
-import { FaCodeBranch, FaEye } from "react-icons/fa";
+import { FaCodeBranch } from "react-icons/fa";
+import { GiBinoculars } from "react-icons/gi";
 
 interface Props {
   title: string;
@@ -17,16 +18,16 @@ interface Props {
 }
 const Work = () => {
   return (
-    <div className='my-5' id='work'>
+    <div className="my-5" id="work">
       <Header>some projects</Header>
       {/* <Ps>
         Please note the content for some of these have not been updated, but all
         funtionalities work.
       </Ps> */}
       <List>
-        {works.map((work) => (
+        {works.map((work, i) => (
           <ListItem
-            key={work.id}
+            key={i}
             title={work.title}
             description={work.description}
             clientUrl={work.clientUrl}
@@ -55,24 +56,24 @@ const ListItem: React.FC<Props> = ({
       viewport={{ once: true }}
       transition={{ delay: 0.5 }}
     >
-      <Head className='text-capitalize'>{title}</Head>
+      <Head className="text-capitalize">{title}</Head>
       <Text>{description}</Text>
-      <div className='d-flex gap-4'>
+      <div className="d-flex gap-4">
         {clientUrl !== "" && (
-          <a href={clientUrl} rel='noreferrer' target='_blank'>
+          <a href={clientUrl} rel="noreferrer" target="_blank">
             <FaCodeBranch size={15} color={colors.primary} />
             <span>client</span>
           </a>
         )}
         {serverUrl !== "" && (
-          <a href={serverUrl} rel='noreferrer' target='_blank'>
+          <a href={serverUrl} rel="noreferrer" target="_blank">
             <FaCodeBranch size={15} color={colors.primary} />
             <span>api</span>
           </a>
         )}
 
-        <a href={liveUrl} rel='noreferrer' target='_blank'>
-          <FaEye size={20} color={colors.primary} />
+        <a href={liveUrl} rel="noreferrer" target="_blank">
+          <GiBinoculars size={30} color={colors.primary} />
           {/* <span>live</span> */}
         </a>
       </div>
@@ -92,7 +93,7 @@ const List = styled.ul`
   & li {
     list-style: decimal-leading-zero;
     max-width: 700px;
-    border-bottom: 1px solid ${colors.primary};
+    /* border-bottom: 1px solid ${colors.primary}; */
     /* background-color: ${colors.box}; */
     margin-bottom: 3rem;
     padding: 1rem;

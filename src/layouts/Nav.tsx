@@ -47,8 +47,8 @@ const Nav = () => {
       }`}
     >
       <Wrapper>
-        <div className='row p-0 m-0 py-3 align-items-center'>
-          <div className='col-lg-4 m-0 p-0'>
+        <div className="row p-0 m-0 py-3 align-items-center">
+          {/* <div className='col-lg-4 m-0 p-0'>
             <Link to='/'>
               <motion.div
                 initial={{ opacity: 0 }}
@@ -59,15 +59,15 @@ const Nav = () => {
                 <Image src={Logo} />
               </motion.div>
             </Link>
-          </div>
+          </div> */}
           <motion.div
-            className='col-lg-8 align-self-center p-0'
+            className="col-lg-12 align-self-end p-0"
             initial={{ opacity: 0, x: 5 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
             <NavMenu>
-              <ul className='d-flex justify-content-end gap-4 align-items-center'>
+              <ul className="d-flex justify-content-end gap-4 align-items-center">
                 {menus.map((menu) => (
                   <NavItemLg key={menu.id} menu={menu} />
                 ))}

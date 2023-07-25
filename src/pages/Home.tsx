@@ -7,14 +7,15 @@ import Work from "../components/Work";
 // import BackgroundImg from "../assets/images/background.jpeg";
 import colors from "../constants/colors";
 import Contact from "../components/Contact";
-import Spinner from "../shared/Spinner";
+import PageLoader from "../shared/PageLoader";
 
 const Home = () => {
   const [loading, setloading] = useState(true);
   setTimeout(() => {
     setloading(false);
   }, 3000);
-  if (loading) return <Spinner />;
+
+  if (loading) return <PageLoader />;
 
   return (
     <Container>

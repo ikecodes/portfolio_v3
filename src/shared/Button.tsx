@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import colors from "../constants/colors";
+import { motion } from "framer-motion";
 
 interface Props {
   children: React.ReactNode;
@@ -10,10 +11,19 @@ interface BtnProps {
   active?: boolean;
 }
 const Button: React.FC<Props> = ({ children, active }) => {
-  return <Btn active={active}>{children}</Btn>;
+  return (
+    <Btn
+      whileHover={{ scale: 1.2 }}
+      whileTap={{ scale: 0.9 }}
+      transition={{ type: "spring", stiffness: 400, damping: 17 }}
+      active={active}
+    >
+      {children}
+    </Btn>
+  );
 };
 
-const Btn = styled.button<BtnProps>`
+const Btn = styled(motion.button)<BtnProps>`
   background-color: ${(props) =>
     props.active ? colors.primaryLight : "transparent"};
   color: ${colors.primary};
@@ -23,10 +33,5 @@ const Btn = styled.button<BtnProps>`
   text-transform: capitalize;
   font-weight: 900;
   border-radius: 1.5rem;
-  transition: all 0.3s ease-in-out;
-  &:hover {
-    background-color: ${colors.primaryLight};
-    transform: scale(1.05);
-  }
 `;
 export default Button;

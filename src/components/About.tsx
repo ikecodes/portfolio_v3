@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import Me from "../assets/images/me.jpg";
+import Me from "../assets/images/i.jpg";
 import colors from "../constants/colors";
 import Header from "../shared/Header";
 import Text from "../shared/Text";
@@ -10,15 +10,15 @@ import technologies from "../constants/technologies";
 
 const About = () => {
   return (
-    <div className='mt-5' id='about'>
+    <div className="mt-5" id="about">
       <Header>about me</Header>
-      <div className='row justify-content-start align-items-center'>
+      <div className="row justify-content-start align-items-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
           viewport={{ once: true }}
-          className='col-lg-8 mb-5'
+          className="col-lg-8 mb-5"
         >
           <Text>
             I am Ikechukwu, a software engineer with 3+ years of experience. I
@@ -39,7 +39,7 @@ const About = () => {
           </List>
         </motion.div>
         <motion.div
-          className='col-lg-4 text-center'
+          className="col-lg-4 text-center"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 1 }}

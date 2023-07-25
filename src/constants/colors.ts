@@ -2,7 +2,6 @@ const colors = {
   primary: "#F8FFEA",
   primaryLight: "rgba(248,255,234,0.3)",
   dark: "#151515",
-  // dark: "#323232",
   light: "#F5F9FF",
   box: "#1b1b1d",
   dim: "#777775",

@@ -1,2 +1,3 @@
 import Home from "./Home";
-export { Home };
+import Socket from "./Socket";
+export { Home, Socket };

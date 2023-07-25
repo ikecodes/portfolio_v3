@@ -5,9 +5,16 @@ import colors from "../constants/colors";
 
 const Footer = () => {
   return (
-    <Container className='mt-5'>
+    <Container className="mt-5">
       <p>designed & built by onuorah ike &copy; 2021</p>
-      <ScrollToTop smooth color={colors.dark} />
+      <ScrollToTop
+        smooth
+        color={colors.dark}
+        style={{
+          fontSize: "0.5rem",
+          borderRadius: "50%",
+        }}
+      />
     </Container>
   );
 };
