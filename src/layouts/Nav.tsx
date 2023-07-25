@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
 import styled from "styled-components";
-import Logo from "../assets/images/head.jpg";
 import NavItemLg from "./NavItemLg";
 import menus from "../constants/menus";
 // import Button from "../shared/Button";
@@ -113,11 +111,11 @@ const NavMenu = styled.div`
     display: none;
   }
 `;
-const Image = styled.img`
-  height: auto;
-  width: 3.5rem;
-  border-radius: 50%;
-`;
+// const Image = styled.img`
+//   height: auto;
+//   width: 3.5rem;
+//   border-radius: 50%;
+// `;
 
 const Wrapper = styled.div`
   padding: 0 3rem;

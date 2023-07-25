@@ -9,7 +9,6 @@ function App() {
       <ScrollToTop>
         <Routes>
           <Route path="/" element={<Home />} />
-          {/* <Route path='/socket' element={<Socket />} /> */}
         </Routes>
       </ScrollToTop>
     </Router>
