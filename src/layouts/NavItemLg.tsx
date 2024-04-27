@@ -11,8 +11,8 @@ interface Props {
 }
 const NavItemLg: React.FC<Props> = ({ menu }) => {
   return (
-    <div className='position-relative'>
-      <NavItem role='button'>
+    <div className="position-relative">
+      <NavItem role="button">
         <Link to={menu.path} spy={true}>
           {menu.name}
         </Link>
@@ -27,7 +27,6 @@ const NavItem = styled.li`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /* align-items: center; */
   text-transform: capitalize;
   transform-origin: left;
   font-size: 1.5rem;

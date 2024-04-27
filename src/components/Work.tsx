@@ -5,8 +5,7 @@ import Text from "../shared/Text";
 import colors from "../constants/colors";
 import works from "../constants/works";
 import { motion } from "framer-motion";
-import { FaCodeBranch } from "react-icons/fa";
-import { GiBinoculars } from "react-icons/gi";
+import { FaCodeBranch, FaLink } from "react-icons/fa";
 
 interface Props {
   title: string;
@@ -56,7 +55,25 @@ const ListItem: React.FC<Props> = ({
       viewport={{ once: true }}
       transition={{ delay: 0.5 }}
     >
-      <Head className="text-capitalize">{title}</Head>
+      <Head>
+        <a
+          href={liveUrl}
+          rel="noreferrer"
+          target="_blank"
+          className="text-capitalize"
+        >
+          {title}
+        </a>
+        <a
+          href={liveUrl}
+          style={{ marginLeft: "0.5rem" }}
+          rel="noreferrer"
+          target="_blank"
+        >
+          <FaLink size={17} color={colors.primary} />
+        </a>
+      </Head>
+
       <Text>{description}</Text>
       <div className="d-flex gap-4">
         {clientUrl !== "" && (
@@ -71,11 +88,6 @@ const ListItem: React.FC<Props> = ({
             <span>api</span>
           </a>
         )}
-
-        <a href={liveUrl} rel="noreferrer" target="_blank">
-          <GiBinoculars size={30} color={colors.primary} />
-          {/* <span>live</span> */}
-        </a>
       </div>
       {/* <Stack className='d-flex gap-2 flex-wrap'>
         {stacks.map((stack) => (
@@ -88,28 +100,27 @@ const ListItem: React.FC<Props> = ({
 
 const List = styled.ul`
   color: ${colors.dim};
-  /* margin: 0;
-  padding: 0; */
   & li {
     list-style: decimal-leading-zero;
     max-width: 700px;
-    /* border-bottom: 1px solid ${colors.primary}; */
-    /* background-color: ${colors.box}; */
     margin-bottom: 3rem;
     padding: 1rem;
+
     & a {
+      font-size: 1.5rem;
       text-decoration: none;
       color: ${colors.primary};
     }
     & span {
       font-size: 0.8rem;
       margin-left: 0.2rem;
-      /* text-transform: capitalize; */
     }
   }
 `;
-const Head = styled.h4`
+const Head = styled.div`
   color: ${colors.light};
+  display: flex;
+  align-items: center;
 `;
 // const Stack = styled.div`
 //   color: ${colors.primary};

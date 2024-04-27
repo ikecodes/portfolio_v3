@@ -8,13 +8,25 @@ const works: {
   stacks: string[];
 }[] = [
   {
-    title: "grooming endownment trust",
+    title: "Grooming endownment trust",
     description:
       "Grooming Endowment Trust was set up as a nonprofit organisation that promotes sustainable social initiatives in education, health, enterprise and community development. Endowed with initial seed funding from Grooming Centre, the Trust provides grants and investments to social enterprises creating impact in their communities.",
     clientUrl: "",
     // clientUrl: "https://github.com/ikecodes/grooming_endowment_trust",
     serverUrl: "",
-    liveUrl: "https://www.groomingendowment.org",
+    liveUrl: "https://grooming-endowment-v2-git-main-ikecodes.vercel.app/",
+    openSource: true,
+    stacks: ["React", "Bootstrap", "Styled-Components", "Firebase"],
+  },
+  {
+    title: "Fida Credit",
+    description:
+      "The Fida Credit app helps you integrate technology into your farming process. You can register, manage, and keep track of all the smallholder farmers within your agricultural organization.",
+    clientUrl: "",
+    // clientUrl: "https://github.com/ikecodes/grooming_endowment_trust",
+    serverUrl: "",
+    liveUrl:
+      "https://play.google.com/store/apps/details?id=com.fidacredit&pli=1",
     openSource: true,
     stacks: ["React", "Bootstrap", "Styled-Components", "Firebase"],
   },
