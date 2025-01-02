@@ -31,7 +31,12 @@ const Hero = () => {
 
           <Header className="text-uppercase mb-0 m-0">onuorah ike</Header>
 
-          <div className="row justify-content-start align-items-start">
+          <div
+            style={{
+              marginBottom: "10rem",
+            }}
+            className="row justify-content-start align-items-start"
+          >
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}

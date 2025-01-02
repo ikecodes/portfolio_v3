@@ -8,13 +8,24 @@ const works: {
   stacks: string[];
 }[] = [
   {
-    title: "Grooming endownment trust",
+    title: "Loubby AI",
     description:
-      "Grooming Endowment Trust was set up as a nonprofit organisation that promotes sustainable social initiatives in education, health, enterprise and community development. Endowed with initial seed funding from Grooming Centre, the Trust provides grants and investments to social enterprises creating impact in their communities.",
+      "The Fida Credit app helps you integrate technology into your farming process. You can register, manage, and keep track of all the smallholder farmers within your agricultural organization.",
     clientUrl: "",
     // clientUrl: "https://github.com/ikecodes/grooming_endowment_trust",
     serverUrl: "",
-    liveUrl: "https://grooming-endowment-v2-git-main-ikecodes.vercel.app/",
+    liveUrl: "https://loubby.ai/",
+    openSource: true,
+    stacks: ["React", "Bootstrap", "Styled-Components", "Firebase"],
+  },
+  {
+    title: "Crust Personal Banking App",
+    description:
+      "The Fida Credit app helps you integrate technology into your farming process. You can register, manage, and keep track of all the smallholder farmers within your agricultural organization.",
+    clientUrl: "",
+    // clientUrl: "https://github.com/ikecodes/grooming_endowment_trust",
+    serverUrl: "",
+    liveUrl: "https://apps.apple.com/ml/app/crust-personal/id6495368880",
     openSource: true,
     stacks: ["React", "Bootstrap", "Styled-Components", "Firebase"],
   },
@@ -27,6 +38,17 @@ const works: {
     serverUrl: "",
     liveUrl:
       "https://play.google.com/store/apps/details?id=com.fidacredit&pli=1",
+    openSource: true,
+    stacks: ["React", "Bootstrap", "Styled-Components", "Firebase"],
+  },
+  {
+    title: "Grooming endownment trust",
+    description:
+      "Grooming Endowment Trust was set up as a nonprofit organisation that promotes sustainable social initiatives in education, health, enterprise and community development. Endowed with initial seed funding from Grooming Centre, the Trust provides grants and investments to social enterprises creating impact in their communities.",
+    clientUrl: "",
+    // clientUrl: "https://github.com/ikecodes/grooming_endowment_trust",
+    serverUrl: "",
+    liveUrl: "https://grooming-endowment-v2-git-main-ikecodes.vercel.app/",
     openSource: true,
     stacks: ["React", "Bootstrap", "Styled-Components", "Firebase"],
   },
@@ -51,24 +73,6 @@ const works: {
     stacks: ["React Native", "Node.js/Express", "MongoDb"],
   },
   {
-    title: "spid realty",
-    description:
-      "Spid Realty is redefining real estate marketing, advertising and sales to help real estate companies and agents achieve their marketing and sales goals while ensuring that clients are happy and fulfilled through making secured purchases on our platform.",
-    clientUrl: "",
-    serverUrl: "",
-    liveUrl: "https://spid-realty.vercel.app/",
-    openSource: false,
-    stacks: [
-      "React",
-      "Bootstrap",
-      "Styled-Components",
-      "Typescript",
-      "Node.js/Express",
-      "MongoDb",
-    ],
-  },
-
-  {
     title: "xaron tech",
     description:
       "Xaron technologies solves delievery services problem in Nigeria. A system created for delivery service owners to easily manage there riders. Verified independent riders can also signup and have access to these features. Xaron helps users find delivery riders nearest to there location.",
@@ -90,6 +94,18 @@ const works: {
     openSource: false,
     stacks: ["React Native", "Node.js/Express", "MongoDb"],
   },
+
+  {
+    title: "FriendStart",
+    description:
+      "FriendStart is a mobile application thats helps you meet new friends with similar interests. Aim was to build an app that helps break the ice by connecting both parties with events.",
+    clientUrl: "",
+    serverUrl: "",
+    liveUrl: "https://apps.apple.com/us/app/friendstart/id1643136304",
+    openSource: false,
+    stacks: ["Node.js/Express", "MongoDb"],
+  },
+
   // {
   //   title: "broadcast nigeria",
   //   description:
@@ -102,16 +118,23 @@ const works: {
   //   openSource: true,
   //   stacks: ["React", "Redux", "CSS modules", "Node.js/Express", "MongoDb"],
   // },
-  {
-    title: "FriendStart",
-    description:
-      "FriendStart is a mobile application thats helps you meet new friends with similar interests. Aim was to build an app that helps break the ice by connecting both parties with events.",
-    clientUrl: "",
-    serverUrl: "",
-    liveUrl: "https://apps.apple.com/us/app/friendstart/id1643136304",
-    openSource: false,
-    stacks: ["Node.js/Express", "MongoDb"],
-  },
+  // {
+  //   title: "spid realty",
+  //   description:
+  //     "Spid Realty is redefining real estate marketing, advertising and sales to help real estate companies and agents achieve their marketing and sales goals while ensuring that clients are happy and fulfilled through making secured purchases on our platform.",
+  //   clientUrl: "",
+  //   serverUrl: "",
+  //   liveUrl: "https://spid-realty.vercel.app/",
+  //   openSource: false,
+  //   stacks: [
+  //     "React",
+  //     "Bootstrap",
+  //     "Styled-Components",
+  //     "Typescript",
+  //     "Node.js/Express",
+  //     "MongoDb",
+  //   ],
+  // },
   // {
   //   title: "Ecomms",
   //   description:
