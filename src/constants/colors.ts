@@ -1,13 +1,13 @@
 const colors = {
   primary: "#C8D8E4", // A muted steel blue with a touch of sophistication
   primaryLight: "rgba(93,106,125,0.3)", // Lightened version of primary
-  dark: "#283747", // Deep, rich blue-black for depth
+  dark: "#1C2A38", // Deeper, richer blue-black for more contrast
   light: "#EAECEE", // Soft off-white with a hint of grey
   box: "#1C2833", // Dark, warm charcoal with depth
   dim: "#85929E", // Subtle, cool grey with a blue tint
   grey: "#D5DBDB", // Light grey with a clean, airy feel
   green: "#7D9B6D", // Olive green with a mature, earthy tone
-  black: "#212F3D", // Elegant dark charcoal-black
+  black: "#121B26",
   white: "#FFFFFF",
 };
 // const colors = {

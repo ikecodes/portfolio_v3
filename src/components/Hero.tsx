@@ -3,13 +3,11 @@ import styled from "styled-components";
 import Container from "../layouts/Container";
 import Text from "../shared/Text";
 import { motion } from "framer-motion";
-import WhiteHighlight from "../shared/WhiteHighlight";
 import colors from "../constants/colors";
 import Button from "../shared/Button";
 import { Image, ImageBox } from "./About";
 import Me from "../assets/images/i.jpg";
 import { FaPaperPlane } from "react-icons/fa";
-import { PiPaperPlaneRightFill } from "react-icons/pi";
 
 const Hero = () => {
   return (
@@ -32,9 +30,9 @@ const Hero = () => {
           <Header className="text-uppercase mb-0 m-0">onuorah ike</Header>
 
           <div
-            style={{
-              marginBottom: "10rem",
-            }}
+            // style={{
+            //   marginBottom: "10rem",
+            // }}
             className="row justify-content-start align-items-start"
           >
             <motion.div
@@ -97,7 +95,7 @@ const Hero = () => {
   );
 };
 const Box = styled.div`
-  margin-top: 15rem;
+  margin-top: 5rem;
 `;
 const Header = styled.h1`
   color: ${colors.light};

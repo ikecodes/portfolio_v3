@@ -12,7 +12,7 @@ const Container: React.FC<Props> = ({ children }) => {
   );
 };
 const Wrapper = styled.section`
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;

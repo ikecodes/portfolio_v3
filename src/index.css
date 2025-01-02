@@ -21,9 +21,19 @@ section {
   display: block;
 }
 body,
-body * {
+/* body * {
   line-height: 1 !important;
   font-family: "League Spartan", sans-serif !important;
+} */
+
+body * {
+  font-family: "Roboto", sans-serif !important;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Lora", serif;
 }
 blockquote,
 q {
