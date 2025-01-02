@@ -11,7 +11,7 @@ import technologies from "../constants/technologies";
 const About = () => {
   return (
     <div className="mt-5" id="about">
-      <Header>about me</Header>
+      <Header>about</Header>
       <div className="row justify-content-start align-items-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -21,14 +21,15 @@ const About = () => {
           className="col-lg-8 mb-5"
         >
           <Text>
-            I am Ikechukwu, a software engineer with 3+ years of experience. I
-            have strong experience building user friendly and accessible
-            front-end for web and mobile applications using react and react
-            native respectively. I also have strong background in building solid
-            and scalable Api's using Node.js. I enjoy working in teams and
-            learning new technologies. Here are some technologies I use:
+            I’m a software engineer with 5 years of experience building
+            user-friendly web and mobile applications. I specialize in React,
+            React Native, and Node.js for seamless interfaces and scalable APIs.
+            My expertise also extends to AWS cloud services, where I design
+            secure, efficient, and scalable solutions. I thrive on solving
+            problems, learning new technologies, and collaborating with teams to
+            create impactful products. Here are some technologies I use:
           </Text>
-          <List>
+          {/* <List>
             {technologies.map((tech) => (
               <ListItem key={tech.id}>
                 <li>
@@ -36,7 +37,7 @@ const About = () => {
                 </li>
               </ListItem>
             ))}
-          </List>
+          </List> */}
         </motion.div>
         <motion.div
           className="col-lg-4 text-center"
@@ -54,11 +55,11 @@ const About = () => {
   );
 };
 
-const ImageBox = styled.div`
+export const ImageBox = styled.div`
   position: relative;
   height: 10rem;
   width: 10rem;
-  margin-bottom: 15rem;
+  /* margin-bottom: 15rem; */
   border-radius: 50%;
 
   z-index: 2;
@@ -94,7 +95,7 @@ const ImageBox = styled.div`
     transition: all 0.3s ease-in;
   }
 `;
-const Image = styled.img`
+export const Image = styled.img`
   position: absolute;
   height: 100%;
   width: 100%;

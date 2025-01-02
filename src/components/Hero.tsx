@@ -6,6 +6,10 @@ import { motion } from "framer-motion";
 import WhiteHighlight from "../shared/WhiteHighlight";
 import colors from "../constants/colors";
 import Button from "../shared/Button";
+import { Image, ImageBox } from "./About";
+import Me from "../assets/images/i.jpg";
+import { FaPaperPlane } from "react-icons/fa";
+import { PiPaperPlaneRightFill } from "react-icons/pi";
 
 const Hero = () => {
   return (
@@ -22,13 +26,52 @@ const Hero = () => {
             viewport={{ once: true }}
             transition={{ delay: 0.5 }}
           >
-            <Hello className='m-0'>👋🏾 Hello, I'm</Hello>
+            <Hello className="m-0">👋🏽 Hi! I’m</Hello>
           </motion.div>
 
-          <Header className='text-capitalize mb-0 m-0'>
-            onuorah ikechukwu
-          </Header>
-          <Width className='mt-2'>
+          <Header className="text-uppercase mb-0 m-0">onuorah ike</Header>
+
+          <div className="row justify-content-start align-items-start">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5 }}
+              viewport={{ once: true }}
+              className="col-lg-8 mb-5"
+            >
+              <Text>
+                I build accessible, user-friendly web and mobile applications. I
+                specialize in React, React Native, and Node.js for seamless
+                interfaces and scalable APIs. My expertise also extends to AWS
+                cloud services, where I design secure, efficient, and scalable
+                solutions. I thrive on solving problems, learning new
+                technologies, and collaborating with teams to create impactful
+                products.
+              </Text>
+              <a
+                href="mailto:ikecodes@gmail.com"
+                style={{
+                  textDecoration: "none",
+                }}
+              >
+                <Button icon={<FaPaperPlane />} active>
+                  contact me
+                </Button>
+              </a>
+            </motion.div>
+            <motion.div
+              className="col-lg-4 text-center"
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ delay: 1 }}
+              viewport={{ once: true }}
+            >
+              <ImageBox>
+                <Image src={Me} />
+              </ImageBox>
+            </motion.div>
+          </div>
+          {/* <Width>
             <Text>
               a <WhiteHighlight> software engineer</WhiteHighlight> specializing
               in building (and occasionally designing) awesome
@@ -39,17 +82,17 @@ const Hero = () => {
               <WhiteHighlight> scalable</WhiteHighlight> &{" "}
               <WhiteHighlight>secure</WhiteHighlight> APIs.
             </Text>
-            <a href='mailto:ikecodes@gmail.com'>
+            <a href="mailto:ikecodes@gmail.com">
               <Button active>contact me</Button>
             </a>
-          </Width>
+          </Width> */}
         </motion.div>
       </Box>
     </Container>
   );
 };
 const Box = styled.div`
-  margin-top: 10rem;
+  margin-top: 15rem;
 `;
 const Header = styled.h1`
   color: ${colors.light};

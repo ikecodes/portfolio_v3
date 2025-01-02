@@ -17,12 +17,8 @@ interface Props {
 }
 const Work = () => {
   return (
-    <div className="my-5" id="work">
-      <Header>some projects</Header>
-      {/* <Ps>
-        Please note the content for some of these have not been updated, but all
-        funtionalities work.
-      </Ps> */}
+    <div className="my-5" id="works">
+      <Header>works</Header>
       <List>
         {works.map((work, i) => (
           <ListItem

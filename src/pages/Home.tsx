@@ -22,7 +22,7 @@ const Home = () => {
       <Layout>
         <Wrapper>
           <Hero />
-          <About />
+          {/* <About /> */}
           <Work />
           <Contact />
         </Wrapper>

@@ -6,11 +6,12 @@ import { motion } from "framer-motion";
 interface Props {
   children: React.ReactNode;
   active?: boolean;
+  icon?: any;
 }
 interface BtnProps {
   active?: boolean;
 }
-const Button: React.FC<Props> = ({ children, active }) => {
+const Button: React.FC<Props> = ({ icon, children, active }) => {
   return (
     <Btn
       whileHover={{ scale: 1.2 }}
@@ -19,6 +20,7 @@ const Button: React.FC<Props> = ({ children, active }) => {
       active={active}
     >
       {children}
+      <div className="ms-1">{icon}</div>
     </Btn>
   );
 };
@@ -33,5 +35,10 @@ const Btn = styled(motion.button)<BtnProps>`
   text-transform: capitalize;
   font-weight: 900;
   border-radius: 1.5rem;
+  display: flex;
+  gap: 3px;
+  & a {
+    text-decoration: none;
+  }
 `;
 export default Button;

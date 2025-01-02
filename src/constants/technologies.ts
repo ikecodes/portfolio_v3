@@ -5,7 +5,7 @@ interface Technologies {
 const technologies: Technologies[] = [
   {
     id: 1,
-    value: "Javascript (ES6+)",
+    value: "Javascript",
   },
   {
     id: 2,
@@ -16,16 +16,12 @@ const technologies: Technologies[] = [
     value: "React",
   },
   {
-    id: 4,
-    value: "Redux",
-  },
-  {
     id: 5,
     value: "React Native",
   },
   {
     id: 6,
-    value: "Node.js/Express",
+    value: "Node.js (express, next)",
   },
   {
     id: 7,
@@ -44,12 +40,8 @@ const technologies: Technologies[] = [
     value: "NoSql (MongoDb)",
   },
   {
-    id: 11,
-    value: "RabbitMQ",
-  },
-  {
     id: 12,
-    value: "NextJs",
+    value: "AWS",
   },
 ];
 
