@@ -1,18 +1,16 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import About from "../components/About";
 import Hero from "../components/Hero";
 import Layout from "../layouts/Layout";
 import Work from "../components/Work";
-// import BackgroundImg from "../assets/images/background.jpeg";
 import colors from "../constants/colors";
 import Contact from "../components/Contact";
 import PageLoader from "../shared/PageLoader";
 
 const Home = () => {
-  const [loading, setloading] = useState(true);
+  const [loading, setLoading] = useState(true);
   setTimeout(() => {
-    setloading(false);
+    setLoading(false);
   }, 3000);
 
   if (loading) return <PageLoader />;
@@ -22,7 +20,6 @@ const Home = () => {
       <Layout>
         <Wrapper>
           <Hero />
-          {/* <About /> */}
           <Work />
           <Contact />
         </Wrapper>
@@ -32,10 +29,8 @@ const Home = () => {
 };
 
 const Container = styled.div`
-  /* background-image: url("https://res.cloudinary.com/djwxy9aol/image/upload/v1653257338/lpebxj9qlqydm73pawhz.jpg"); */
   background-color: ${colors.dark};
   background-position: center;
-  /* border: 2px solid ${colors.primary}; */
   color: ${colors.light};
 `;
 const Wrapper = styled.div`

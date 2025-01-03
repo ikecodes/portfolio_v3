@@ -1,43 +1,59 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 import NavItemLg from "./NavItemLg";
 import menus from "../constants/menus";
-// import Button from "../shared/Button";
 import colors from "../constants/colors";
 import NavSm from "./NavSm";
-// import urls from "../constants/urls";
 import { motion } from "framer-motion";
 
 const Nav = () => {
   const [show, setShow] = useState(true);
   const [isAnimating, setIsAnimating] = useState(false);
   const [pageY, setPageY] = useState(0);
+  const [isScrolling, setIsScrolling] = useState(false);
 
   let oldValue = 0;
   let newValue = 0;
+  let scrollTimeout;
   const controlNav = () => {
     window.addEventListener("scroll", (e) => {
-      newValue = window.pageYOffset;
-      setPageY(window.pageYOffset);
+      newValue = window.scrollY;
+      setPageY(window.scrollY);
       if (oldValue < newValue) {
-        // console.log("Up");
         setShow(false);
-      } else if (oldValue > newValue || window.pageYOffset === 0) {
-        // console.log("Down");
+      } else if (oldValue > newValue || window.scrollY === 0) {
         setShow(true);
       }
       oldValue = newValue;
     });
   };
 
-  useEffect(() => {
-    window.addEventListener("scroll", controlNav);
+  const handleScroll = () => {
+    setIsScrolling(true);
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(() => {
+      setIsScrolling(false);
+    }, 500);
+  };
 
+  useEffect(() => {
+    // Attach the scroll event listener
+    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", controlNav);
     return () => {
       window.removeEventListener("scroll", controlNav);
+      window.removeEventListener("scroll", handleScroll);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  useEffect(() => {
+    if (isScrolling) {
+      document.body.classList.add("scrolling");
+    } else {
+      document.body.classList.remove("scrolling");
+    }
+  }, [isScrolling]);
   return (
     <NavContainer
       className={`${show === true || isAnimating === true ? "" : "noShow"} ${
@@ -92,14 +108,9 @@ const NavContainer = styled.nav`
   top: 0;
   left: 0;
   z-index: 10;
-  /* border-left: 2px solid ${colors.primary};
-  border-right: 2px solid ${colors.primary};
-  border-top: 2px solid ${colors.primary}; */
   background-color: ${colors.dark};
   transition: all 0.3s ease-in;
   &.noShow {
-    /* visibility: hidden;
-    opacity: 0; */
     transform: translateY(-100%);
   }
 `;
@@ -111,11 +122,6 @@ const NavMenu = styled.div`
     display: none;
   }
 `;
-// const Image = styled.img`
-//   height: auto;
-//   width: 3.5rem;
-//   border-radius: 50%;
-// `;
 
 const Wrapper = styled.div`
   padding: 0 3rem;

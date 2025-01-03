@@ -3,7 +3,6 @@
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
   vertical-align: baseline;
 }
 
@@ -20,16 +19,9 @@ nav,
 section {
   display: block;
 }
-body,
-/* body * {
-  line-height: 1 !important;
-  font-family: "League Spartan", sans-serif !important;
-} */
-
 body * {
   font-family: "Roboto", sans-serif !important;
 }
-
 h1,
 h2,
 h3 {
@@ -57,15 +49,30 @@ p {
   line-height: 1.5 !important;
 }
 
-/* website scrollbar */
+body {
+  scrollbar-gutter: stable !important;
+}
 body::-webkit-scrollbar {
-  width: 0;
+  width: 5px;
+  background: #1c2a38 !important;
 }
+
 body::-webkit-scrollbar-track {
+  background-color: transparent !important;
   box-shadow: none;
-  /* background-color: #2280b9; */
 }
+
 body::-webkit-scrollbar-thumb {
-  /* background-color: #0f3677; */
-  outline: none;
+  background-color: #d3d3d3; /* Light grey scrollbar thumb */
+  border-radius: 6px; /* Smooth edges for a modern look */
+  outline: none; /* No outline for the thumb */
+  opacity: 0; /* Initially hidden */
+  visibility: hidden; /* Thumb is not visible or interactive */
+  transition: opacity 0.3s, visibility 0.3s; /* Smooth fade-in/out */
+}
+
+body.scrolling::-webkit-scrollbar-thumb {
+  opacity: 1; /* Fully visible */
+  visibility: visible; /* Ensure it's interactive */
+  transition: 0.5s ease-in-out; /* Slow fade-in */
 }

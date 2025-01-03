@@ -5,7 +5,6 @@ import Text from "../shared/Text";
 import { motion } from "framer-motion";
 import colors from "../constants/colors";
 import Button from "../shared/Button";
-import { Image, ImageBox } from "./About";
 import Me from "../assets/images/i.jpg";
 import { FaPaperPlane } from "react-icons/fa";
 
@@ -94,6 +93,57 @@ const Hero = () => {
     </Container>
   );
 };
+
+const ImageBox = styled.div`
+  position: relative;
+  height: 10rem;
+  width: 10rem;
+  /* margin-bottom: 15rem; */
+  border-radius: 50%;
+
+  z-index: 2;
+  &:hover::before {
+    top: 10%;
+    left: 10%;
+  }
+  &:hover::after {
+    background-color: transparent;
+  }
+  &::before {
+    position: absolute;
+    content: " ";
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    border: 2px solid ${colors.primary};
+    top: 20%;
+    left: 20%;
+    border-radius: 50%;
+    transition: all 0.3s ease-in;
+  }
+  &::after {
+    position: absolute;
+    content: " ";
+    z-index: 4;
+    height: 100%;
+    width: 100%;
+    background-color: ${colors.primaryLight};
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    transition: all 0.3s ease-in;
+  }
+`;
+const Image = styled.img`
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  z-index: 3;
+  top: 0;
+  left: 0;
+`;
 const Box = styled.div`
   margin-top: 5rem;
 `;
@@ -110,9 +160,6 @@ const Header = styled.h1`
   @media (max-width: 576px) {
     font-size: 4rem;
   }
-`;
-const Width = styled.div`
-  /* max-width: 700px; */
 `;
 const Hello = styled.h2`
   color: ${colors.primary};

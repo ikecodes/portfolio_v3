@@ -20,7 +20,22 @@ const Button: React.FC<Props> = ({ icon, children, active }) => {
       active={active}
     >
       {children}
-      <div className="ms-1">{icon}</div>
+      <div className="ms-2">{icon}</div>
+      {/* <motion.div
+        initial={{ translateY: 0 }} // Starting position
+        animate={{ translateY: -2 }} // Move up by 10px
+        transition={{
+          type: "spring",
+          stiffness: 100, // Lower stiffness for a smoother transition
+          damping: 30, // Higher damping to reduce the bounce effect
+          repeat: Infinity, // Infinite loop
+          repeatType: "reverse", // Reverse direction after each loop (goes up, then comes back down)
+          repeatDelay: 0.5, // Optional: Add delay between repetitions
+        }}
+        className="ms-2"
+      >
+        {icon}
+      </motion.div> */}
     </Btn>
   );
 };
