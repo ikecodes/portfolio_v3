@@ -5,7 +5,7 @@ import Text from "../shared/Text";
 import colors from "../constants/colors";
 import works from "../constants/works";
 import { motion } from "framer-motion";
-import { BsArrowUpRight } from "react-icons/bs";
+import { MdOutlineArrowOutward } from "react-icons/md";
 
 interface Props {
   title: string;
@@ -56,7 +56,7 @@ const ListItem: React.FC<Props> = ({ title, description, liveUrl, stacks }) => {
           rel="noreferrer"
           target="_blank"
         >
-          <BsArrowUpRight size={17} color={colors.primary} />
+          <MdOutlineArrowOutward size={17} color={colors.primary} />
         </motion.a>
       </Head>
 
@@ -73,7 +73,7 @@ const List = styled.ul`
   & li {
     max-width: 700px;
     margin-bottom: 3rem;
-    padding: 1rem;
+    /* padding: 1rem; */
 
     & a {
       font-size: 1.5rem;
@@ -88,7 +88,7 @@ const List = styled.ul`
 
   & li::marker {
     font-size: 1.5rem;
-    font-weight: bold;
+    /* font-weight: bold; */
   }
 `;
 const Head = styled(motion.div)`

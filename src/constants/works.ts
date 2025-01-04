@@ -14,7 +14,7 @@ const works: {
     stacks: ["React", "Bootstrap", "Styled-Components", "Firebase"],
   },
   {
-    title: "Crust Personal Banking App",
+    title: "Crust Personal Banking",
     description:
       "The Fida Credit app helps you integrate technology into your farming process. You can register, manage, and keep track of all the smallholder farmers within your agricultural organization.",
     liveUrl: "https://apps.apple.com/ml/app/crust-personal/id6495368880",
@@ -31,7 +31,7 @@ const works: {
     stacks: ["React", "Bootstrap", "Styled-Components", "Firebase"],
   },
   {
-    title: "Grooming endownment trust",
+    title: "Grooming endownment",
     description:
       "Grooming Endowment Trust was set up as a nonprofit organisation that promotes sustainable social initiatives in education, health, enterprise and community development. Endowed with initial seed funding from Grooming Centre, the Trust provides grants and investments to social enterprises creating impact in their communities.",
     liveUrl: "https://grooming-endowment-v2-git-main-ikecodes.vercel.app/",
