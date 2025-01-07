@@ -21,7 +21,7 @@ const NavSm: React.FC<Props> = ({ isAnimating, setIsAnimating }) => {
       >
         <NavContainer onClick={(e) => e.stopPropagation()}>
           {menus.map((menu) => (
-            <div className='ms-3' key={menu.id}>
+            <div className="ms-3" key={menu.id}>
               <Heading>
                 <Link to={menu.path} onClick={() => setIsAnimating(false)}>
                   {menu.name}
@@ -34,7 +34,7 @@ const NavSm: React.FC<Props> = ({ isAnimating, setIsAnimating }) => {
               resume
             </a>
           </Heading> */}
-          <div className='ms-3 d-flex gap-3'>
+          <div className="ms-3 d-flex gap-3">
             {/* <IconLink
               href={urls.email}
               target='_blank'
@@ -45,24 +45,24 @@ const NavSm: React.FC<Props> = ({ isAnimating, setIsAnimating }) => {
             </IconLink> */}
             <IconLink
               href={urls.github}
-              target='_blank'
-              rel='noreferrer'
+              target="_blank"
+              rel="noreferrer"
               color={colors.light}
             >
               <BsGithub size={30} />
             </IconLink>
             <IconLink
               href={urls.linkedin}
-              target='_blank'
-              rel='noreferrer'
+              target="_blank"
+              rel="noreferrer"
               color={colors.light}
             >
               <BsLinkedin size={30} />
             </IconLink>
             <IconLink
               href={urls.twitter}
-              target='_blank'
-              rel='noreferrer'
+              target="_blank"
+              rel="noreferrer"
               color={colors.light}
             >
               <BsTwitter size={30} />
@@ -96,7 +96,7 @@ const NavContainer = styled.div`
   position: relative;
   width: 100%;
   height: 100vh;
-  background-color: ${colors.black};
+  background-color: ${colors.darker};
   position: absolute;
   display: flex;
   flex-direction: column;

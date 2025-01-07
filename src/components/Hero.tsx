@@ -7,6 +7,7 @@ import colors from "../constants/colors";
 import Button from "../shared/Button";
 import Me from "../assets/images/i.jpg";
 import { FaPaperPlane } from "react-icons/fa";
+import WhiteHighlight from "../shared/WhiteHighlight";
 
 const Hero = () => {
   return (
@@ -42,13 +43,19 @@ const Hero = () => {
               className="col-lg-8 mb-5"
             >
               <Text>
-                I build accessible, user-friendly web and mobile applications. I
-                specialize in React, React Native, and Node.js for seamless
-                interfaces and scalable APIs. My expertise also extends to AWS
-                cloud services, where I design secure, efficient, and scalable
-                solutions. I thrive on solving problems, learning new
-                technologies, and collaborating with teams to create impactful
-                products.
+                I’m passionate about crafting intuitive, user-friendly web and
+                mobile applications that solve real-world problems. I enjoy the
+                process of bringing ideas to life, whether it's through
+                designing seamless user experiences or creating efficient,
+                scalable systems. I’m always eager to learn, grow, and explore
+                new technologies, while collaborating with others to create
+                impactful, meaningful products. Currently, I work on the
+                development team at{" "}
+                <WhiteHighlight link={"https://loubby.ai/"}>
+                  Loubby AI
+                </WhiteHighlight>
+                . Outside of development, I’m deeply interested in music, which
+                fuels my creativity and inspires my work.
               </Text>
               <a
                 href="mailto:ikecodes@gmail.com"
