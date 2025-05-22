@@ -54,8 +54,6 @@ const Hero = () => {
                 <WhiteHighlight link={"https://loubby.ai/"}>
                   Loubby AI
                 </WhiteHighlight>
-                . Outside of development, I’m deeply interested in music, which
-                fuels my creativity and inspires my work.
               </Text>
               <a
                 href="mailto:ikecodes@gmail.com"
